@@ -11,9 +11,9 @@
   <title> Etzel Server &middot; Etzel Server </title>
 
   
-  <link rel="stylesheet" href="http://etzelserver.comcss/poole.css">
-  <link rel="stylesheet" href="http://etzelserver.comcss/syntax.css">
-  <link rel="stylesheet" href="http://etzelserver.comcss/hyde.css">
+  <link rel="stylesheet" href="http://etzelserver.com/css/poole.css">
+  <link rel="stylesheet" href="http://etzelserver.com/css/syntax.css">
+  <link rel="stylesheet" href="http://etzelserver.com/css/hyde.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   
@@ -35,7 +35,7 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="http://etzelserver.com"><h1>Etzel Server</h1></a>
+      <a href="http://etzelserver.com/"><h1>Etzel Server</h1></a>
       <p class="lead">
       A Fast & Reliable open source Job delegation & queueing server.<a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
       </p>
@@ -65,6 +65,153 @@
 <div class="posts">
 
       
+  <div class="post">
+    <h1 class="post-title">
+      <a href="http://etzelserver.com/getstarted/">
+        Getting started
+      </a>
+    </h1>
+
+    <span style="" class="post-date">Tue, Aug 18, 2015</span>
+
+    <p>Download etzel-server-*.zip from the <a href="http://ff">download</a> section.</p>
+
+<p>Inside the archive is a directory named <code>etzel_release</code>. You should extract this into some appropriate location. The <code>bin</code> directory will be found in this directory.</p>
+
+<p>Open a terminal or command prompt:</p>
+
+<pre><code>cd etzel_release/bin
+./etzel_release console
+
+</code></pre>
+
+<p>use Ctrl+c to stop</p>
+
+<p>to start it in the background:</p>
+
+<pre><code>./etzel_release start
+</code></pre>
+
+<p>to stop:</p>
+
+<pre><code>./etzel_release stop
+</code></pre>
+
+<p>to restart:</p>
+
+<pre><code>./etzel_release restart
+</code></pre>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="http://etzelserver.com/home/">
+        Etzel Server
+      </a>
+    </h1>
+
+    <span style="" class="post-date">Tue, Aug 18, 2015</span>
+
+    
+
+<p>A Fast &amp; Reliable open source Job delegation &amp; queueing server.</p>
+
+<p><img src="/images/etzel.png" alt="Etzel Server" />
+</p>
+
+<p>Etzel is built for Robust messaging between applications. It has built-in support for load-balancing and fault tolerance.</p>
+
+<h3 id="example:b9bcf8cb73ce4a081a635ad7c0acd9dd">Example:</h3>
+
+<p>Let us define some workload i.e. to send emails using PHP(client)</p>
+
+<pre><code class="language-javascript">&lt;?php
+
+$etzel = new EtzelClient(&quot;ws://127.0.0.1:8080/connect&quot;);
+
+$emails= [&quot;abc@example.com&quot;,&quot;def@example.com&quot;,&quot;hij@example.com&quot;];
+
+foreach($emails as $email){
+	
+	$etzel-&gt;publish(&quot;group1&quot;, $email);
+}
+
+</code></pre>
+
+<!-- ?> -->
+
+<p>Now, Let us process those emails using nodejs(worker)</p>
+
+<pre><code class="language-javascript">ec=new EtzelClient(&quot;ws://localhost:8080/connect&quot;);
+
+ec.onopen=function(){
+	
+	ec.subscribe(&quot;group1&quot;,sendMail);
+}
+
+function sendMail(data){
+
+		sendmessage(data.msg,&quot;Subject&quot;,&quot;Message&quot;);
+		ec.acknowledge(data.uid); //delete it
+
+}
+
+</code></pre>
+
+<p><strong>Did you know?</strong>
+you could have hundreds of workers connected to Etzel to do the processing and Etzel will automatically balance the load between them.</p>
+
+<p>Etzel Instances are light weight, Hence you can have multiple Etzel instances running in parallel in the same or different server.</p>
+
+<p><strong>What if a worker dies?</strong></p>
+
+<p>Etzel will route the messages to the workers that are alive and re-send incomplete tasks to other workers.</p>
+
+<p><strong>What if all the workers die?</strong></p>
+
+<p>Etzel will keep the messages until a worker is available.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="http://etzelserver.com/">
+        index
+      </a>
+    </h1>
+
+    <span style="" class="post-date">Mon, Aug 17, 2015</span>
+
+    <p>hello frm index</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="http://etzelserver.com/about/">
+        about
+      </a>
+    </h1>
+
+    <span style="" class="post-date">Mon, Aug 17, 2015</span>
+
+    <p>hello how are</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="http://etzelserver.com/front/">
+        front
+      </a>
+    </h1>
+
+    <span style="" class="post-date">Mon, Jan 1, 0001</span>
+
+    
+  </div>
+  
 </div>
 </div>
 

@@ -1,4 +1,4 @@
-baseurl = "http://etzelserver.com"
+baseurl = "http://etzelserver.com/"
 languageCode = "en-us"
 title = "Etzel Server"
 

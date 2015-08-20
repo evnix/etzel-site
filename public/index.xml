@@ -6,7 +6,140 @@
     <description>Recent content on Etzel Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 18 Aug 2015 13:00:41 +0530</lastBuildDate>
     <atom:link href="http://etzelserver.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Getting started</title>
+      <link>http://etzelserver.com/getstarted/</link>
+      <pubDate>Tue, 18 Aug 2015 13:00:41 +0530</pubDate>
+      
+      <guid>http://etzelserver.com/getstarted/</guid>
+      <description>&lt;p&gt;Download etzel-server-*.zip from the &lt;a href=&#34;http://ff&#34;&gt;download&lt;/a&gt; section.&lt;/p&gt;
+
+&lt;p&gt;Inside the archive is a directory named &lt;code&gt;etzel_release&lt;/code&gt;. You should extract this into some appropriate location. The &lt;code&gt;bin&lt;/code&gt; directory will be found in this directory.&lt;/p&gt;
+
+&lt;p&gt;Open a terminal or command prompt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd etzel_release/bin
+./etzel_release console
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;use Ctrl+c to stop&lt;/p&gt;
+
+&lt;p&gt;to start it in the background:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./etzel_release start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;to stop:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./etzel_release stop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;to restart:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./etzel_release restart
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Etzel Server</title>
+      <link>http://etzelserver.com/home/</link>
+      <pubDate>Tue, 18 Aug 2015 10:35:58 +0530</pubDate>
+      
+      <guid>http://etzelserver.com/home/</guid>
+      <description>
+
+&lt;p&gt;A Fast &amp;amp; Reliable open source Job delegation &amp;amp; queueing server.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://etzelserver.com/images/etzel.png&#34; alt=&#34;Etzel Server&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Etzel is built for Robust messaging between applications. It has built-in support for load-balancing and fault tolerance.&lt;/p&gt;
+
+&lt;h3 id=&#34;example:b9bcf8cb73ce4a081a635ad7c0acd9dd&#34;&gt;Example:&lt;/h3&gt;
+
+&lt;p&gt;Let us define some workload i.e. to send emails using PHP(client)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;&amp;lt;?php
+
+$etzel = new EtzelClient(&amp;quot;ws://127.0.0.1:8080/connect&amp;quot;);
+
+$emails= [&amp;quot;abc@example.com&amp;quot;,&amp;quot;def@example.com&amp;quot;,&amp;quot;hij@example.com&amp;quot;];
+
+foreach($emails as $email){
+	
+	$etzel-&amp;gt;publish(&amp;quot;group1&amp;quot;, $email);
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- ?&gt; --&gt;
+
+&lt;p&gt;Now, Let us process those emails using nodejs(worker)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;ec=new EtzelClient(&amp;quot;ws://localhost:8080/connect&amp;quot;);
+
+ec.onopen=function(){
+	
+	ec.subscribe(&amp;quot;group1&amp;quot;,sendMail);
+}
+
+function sendMail(data){
+
+		sendmessage(data.msg,&amp;quot;Subject&amp;quot;,&amp;quot;Message&amp;quot;);
+		ec.acknowledge(data.uid); //delete it
+
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Did you know?&lt;/strong&gt;
+you could have hundreds of workers connected to Etzel to do the processing and Etzel will automatically balance the load between them.&lt;/p&gt;
+
+&lt;p&gt;Etzel Instances are light weight, Hence you can have multiple Etzel instances running in parallel in the same or different server.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What if a worker dies?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Etzel will route the messages to the workers that are alive and re-send incomplete tasks to other workers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What if all the workers die?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Etzel will keep the messages until a worker is available.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>index</title>
+      <link>http://etzelserver.com/</link>
+      <pubDate>Mon, 17 Aug 2015 23:57:10 +0530</pubDate>
+      
+      <guid>http://etzelserver.com/</guid>
+      <description>&lt;p&gt;hello frm index&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>about</title>
+      <link>http://etzelserver.com/about/</link>
+      <pubDate>Mon, 17 Aug 2015 22:07:32 +0530</pubDate>
+      
+      <guid>http://etzelserver.com/about/</guid>
+      <description>&lt;p&gt;hello how are&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>front</title>
+      <link>http://etzelserver.com/front/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://etzelserver.com/front/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
