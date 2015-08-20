@@ -9,6 +9,7 @@ Download etzel-server-*.zip from the [download](http://ff) section.
 
 Inside the archive is a directory named `etzel_release`. You should extract this into some appropriate location. The `bin` directory will be found in this directory.
 
+
 Open a terminal or command prompt:
 ````
 cd etzel_release/bin
