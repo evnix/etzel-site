@@ -1,0 +1,41 @@
+baseurl = "http://etzelserver.com"
+languageCode = "en-us"
+title = "Etzel Server"
+
+
+    
+[[menu.main]]
+    name = "Getting started"
+    pre = "<i class='fa fa-heart'></i>"
+    weight = 2
+    identifier = "2"
+    url = "/getstarted/"
+
+[[menu.main]]
+    name = "Documentation"
+    pre = "<i class='fa fa-heart'></i>"
+    weight = 3
+    identifier = "3"
+    url = "/about/"    
+    
+[[menu.main]]
+    name = "Language Drivers"
+    pre = "<i class='fa fa-heart'></i>"
+    weight = 4
+    identifier = "4"
+    url = "/about/" 
+    
+[[menu.main]]
+    name = "Examples"
+    pre = "<i class='fa fa-heart'></i>"
+    weight = 5
+    identifier = "5"
+    url = "/about/"
+
+       
+[[menu.main]]
+    name = "About Etzel"
+    pre = "<i class='fa fa-heart'></i>"
+    weight = 6
+    identifier = "about"
+    url = "/about/"
