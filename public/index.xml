@@ -64,7 +64,7 @@
 
 &lt;p&gt;Let us define some workload i.e. to send emails using PHP(client)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;&amp;lt;?php
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
 
 $etzel = new EtzelClient(&amp;quot;ws://127.0.0.1:8080/connect&amp;quot;);
 

@@ -17,7 +17,7 @@ Etzel is built for Robust messaging between applications. It has built-in suppor
 Let us define some workload i.e. to send emails using PHP(client)
 
 
-````javascript
+````php
 <?php
 
 $etzel = new EtzelClient("ws://127.0.0.1:8080/connect");
