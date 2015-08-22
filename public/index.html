@@ -65,6 +65,119 @@
       
   <div class="post">
     <h1 class="post-title">
+      <a href="http://etzelserver.com/docs/internal/server-algorithm/">
+        Server algorithm
+      </a>
+    </h1>
+
+    <span style="" class="post-date">Sat, Aug 22, 2015</span>
+
+    <nav>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#on-subscribe:7abec6c6330e8dbe3e8f868b38416272">ON_SUBSCRIBE:</a></li>
+<li><a href="#on-publish:7abec6c6330e8dbe3e8f868b38416272">ON_PUBLISH:</a></li>
+<li><a href="#on-fet-request:7abec6c6330e8dbe3e8f868b38416272">ON_FET_REQUEST:</a></li>
+<li><a href="#on-ack-del-request:7abec6c6330e8dbe3e8f868b38416272">ON_ACK/DEL_REQUEST:</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+<h6 id="on-subscribe:7abec6c6330e8dbe3e8f868b38416272">ON_SUBSCRIBE:</h6>
+
+<ul>
+<li>Spawn a process for client &amp; attach its PID to the group.</li>
+<li>Example: join_group(Qname,PID)</li>
+</ul>
+
+<h6 id="on-publish:7abec6c6330e8dbe3e8f868b38416272">ON_PUBLISH:</h6>
+
+<ul>
+<li>IF NO DELAY -&gt; CALL PUBLISH();</li>
+<li>Else:
+
+<ul>
+<li>CALL PUBLISH(); with delay</li>
+<li>write this info(key:value) to disk</li>
+</ul></li>
+</ul>
+
+<pre><code>PUBLISH()
+   - Broadcast Awake Signal to all processes in the sleep list.
+   - &amp; Remove those processes from the sleep list.
+   - Spawn a process for the Queue-X if it does not exist
+   - &amp; send the Element to this process.
+   - Now this Queue-X Process will accept the element
+   - &amp; also write(async) the data to disk by generating required key:value  
+</code></pre>
+
+<h6 id="on-fet-request:7abec6c6330e8dbe3e8f868b38416272">ON_FET_REQUEST:</h6>
+
+<pre><code>   1. Pop the top of the Queue 
+   2. if the element has expired 
+        2.1 Delete element from disk
+        2.2 go to step 1
+   3. if the element matches with any element in the delete list: 
+      3.1. remove the element from the delete list.
+      3.2. Go to Step 1
+   3. else Send it to the requested Client 
+   4. increment the 'error_count' of the Element on Disk
+   5. CALL PUBLISH(element); WITH DELAY:60
+</code></pre>
+
+<h6 id="on-ack-del-request:7abec6c6330e8dbe3e8f868b38416272">ON_ACK/DEL_REQUEST:</h6>
+
+<ul>
+<li>Delete the element from disk</li>
+<li>PUSH the element to the delete list</li>
+</ul>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="http://etzelserver.com/docs/internal/worker-algorithm/">
+        Worker algorithm
+      </a>
+    </h1>
+
+    <span style="" class="post-date">Sat, Aug 22, 2015</span>
+
+    
+
+<h4 id="awake-mode:2474f55462f9d4c29cab2ced96e05d14">AWAKE_MODE:</h4>
+
+<pre><code>
+    1. Req for job
+    2. if no job go to SLEEP_MODE
+    3. Process the Job.
+    4. Go to Step 1.
+    
+</code></pre>
+
+<h4 id="sleep-mode:2474f55462f9d4c29cab2ced96e05d14">SLEEP MODE:</h4>
+
+<pre><code>    1. Listen to Socket
+        - If job==AVBL go to AWAKE_MODE
+</code></pre>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="http://etzelserver.com/docs/internal/req-resp-format/">
         request response format
       </a>
@@ -195,9 +308,9 @@ Default is 0(365 days).</p></li>
 
 <ul>
 <li><a href="/docs/internal/req-resp-format/">Request &amp; Response format</a></li>
-<li>Worker Alogrithm/Flow</li>
-<li>Server Algorithm/Flow</li>
-<li>Data format</li>
+<li><a href="/docs/internal/worker-algorithm/">Worker Alogrithm/Flow</a></li>
+<li><a href="/docs/internal/server-algorithm/">Server Algorithm/Flow</a></li>
+<li><a href="/docs/internal/data-format/">Data format</a></li>
 </ul>
 
   </div>

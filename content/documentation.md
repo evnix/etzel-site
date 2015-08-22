@@ -12,8 +12,8 @@ title = "Documentation"
 ### Etzel Internals
 
 - [Request & Response format](/docs/internal/req-resp-format/)
-- Worker Alogrithm/Flow
-- Server Algorithm/Flow
-- Data format
+- [Worker Alogrithm/Flow](/docs/internal/worker-algorithm/)
+- [Server Algorithm/Flow](/docs/internal/server-algorithm/)
+- [Data format](/docs/internal/data-format/)
 
 
