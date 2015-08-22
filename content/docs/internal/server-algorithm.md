@@ -2,19 +2,24 @@
 date = "2015-08-22T22:49:39+05:30"
 draft = true
 title = "Server algorithm"
-
 +++
 
 ###### ON_SUBSCRIBE:
+ 
+```` 
    - Spawn a process for client & attach its PID to the group.
    - Example: join_group(Qname,PID) 
-    
+````    
     
 ###### ON_PUBLISH:
+  
+````
    - IF NO DELAY -> CALL PUBLISH();
    - Else: 
      - CALL PUBLISH(); with delay
      - write this info(key:value) to disk
+````
+
 ````
 PUBLISH()
    - Broadcast Awake Signal to all processes in the sleep list.
@@ -41,5 +46,7 @@ PUBLISH()
 
 ###### ON_ACK/DEL_REQUEST:
 
+````
   - Delete the element from disk
   - PUSH the element to the delete list
+````

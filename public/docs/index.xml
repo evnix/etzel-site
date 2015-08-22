@@ -41,22 +41,17 @@
 
 &lt;h6 id=&#34;on-subscribe:7abec6c6330e8dbe3e8f868b38416272&#34;&gt;ON_SUBSCRIBE:&lt;/h6&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Spawn a process for client &amp;amp; attach its PID to the group.&lt;/li&gt;
-&lt;li&gt;Example: join_group(Qname,PID)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;   - Spawn a process for client &amp;amp; attach its PID to the group.
+   - Example: join_group(Qname,PID) 
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h6 id=&#34;on-publish:7abec6c6330e8dbe3e8f868b38416272&#34;&gt;ON_PUBLISH:&lt;/h6&gt;
 
-&lt;ul&gt;
-&lt;li&gt;IF NO DELAY -&amp;gt; CALL PUBLISH();&lt;/li&gt;
-&lt;li&gt;Else:
-
-&lt;ul&gt;
-&lt;li&gt;CALL PUBLISH(); with delay&lt;/li&gt;
-&lt;li&gt;write this info(key:value) to disk&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;   - IF NO DELAY -&amp;gt; CALL PUBLISH();
+   - Else: 
+     - CALL PUBLISH(); with delay
+     - write this info(key:value) to disk
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;pre&gt;&lt;code&gt;PUBLISH()
    - Broadcast Awake Signal to all processes in the sleep list.
@@ -83,10 +78,9 @@
 
 &lt;h6 id=&#34;on-ack-del-request:7abec6c6330e8dbe3e8f868b38416272&#34;&gt;ON_ACK/DEL_REQUEST:&lt;/h6&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Delete the element from disk&lt;/li&gt;
-&lt;li&gt;PUSH the element to the delete list&lt;/li&gt;
-&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;  - Delete the element from disk
+  - PUSH the element to the delete list
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

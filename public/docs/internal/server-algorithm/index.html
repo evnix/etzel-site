@@ -88,22 +88,17 @@
 
 <h6 id="on-subscribe:7abec6c6330e8dbe3e8f868b38416272">ON_SUBSCRIBE:</h6>
 
-<ul>
-<li>Spawn a process for client &amp; attach its PID to the group.</li>
-<li>Example: join_group(Qname,PID)</li>
-</ul>
+<pre><code>   - Spawn a process for client &amp; attach its PID to the group.
+   - Example: join_group(Qname,PID) 
+</code></pre>
 
 <h6 id="on-publish:7abec6c6330e8dbe3e8f868b38416272">ON_PUBLISH:</h6>
 
-<ul>
-<li>IF NO DELAY -&gt; CALL PUBLISH();</li>
-<li>Else:
-
-<ul>
-<li>CALL PUBLISH(); with delay</li>
-<li>write this info(key:value) to disk</li>
-</ul></li>
-</ul>
+<pre><code>   - IF NO DELAY -&gt; CALL PUBLISH();
+   - Else: 
+     - CALL PUBLISH(); with delay
+     - write this info(key:value) to disk
+</code></pre>
 
 <pre><code>PUBLISH()
    - Broadcast Awake Signal to all processes in the sleep list.
@@ -130,10 +125,9 @@
 
 <h6 id="on-ack-del-request:7abec6c6330e8dbe3e8f868b38416272">ON_ACK/DEL_REQUEST:</h6>
 
-<ul>
-<li>Delete the element from disk</li>
-<li>PUSH the element to the delete list</li>
-</ul>
+<pre><code>  - Delete the element from disk
+  - PUSH the element to the delete list
+</code></pre>
 
 			</div>
 
