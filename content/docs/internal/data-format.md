@@ -16,6 +16,7 @@ Size of each block in bits:
 
 ### Queue element format on disk
 The queue elements are stored in a key value store in the following format.
+
 ````
 1. DATA
 

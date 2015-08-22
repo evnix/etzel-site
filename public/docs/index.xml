@@ -27,30 +27,26 @@ Size of each block in bits:
 
 &lt;h3 id=&#34;queue-element-format-on-disk:80929b78b7ce01a4c5852f6c3b86083d&#34;&gt;Queue element format on disk&lt;/h3&gt;
 
-&lt;p&gt;The queue elements are stored in a key value store in the following format.
-````
-1. DATA&lt;/p&gt;
+&lt;p&gt;The queue elements are stored in a key value store in the following format.&lt;/p&gt;
 
-&lt;p&gt;let us divide DATA which is made up of a key and value.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. DATA
 
-&lt;ol&gt;
-&lt;li&gt;Key: Value&lt;/li&gt;
-&lt;/ol&gt;
+let us divide DATA which is made up of a key and value.
 
-&lt;p&gt;divide them further&lt;/p&gt;
+2. Key: Value
 
-&lt;ol&gt;
-&lt;li&gt;Qname-uid:  error_count|Delay|expires|Item&lt;/li&gt;
-&lt;/ol&gt;
+divide them further
 
-&lt;p&gt;Qname: Variable length text
+3. Qname-uid:  error_count|Delay|expires|Item
+
+Qname: Variable length text
 Uid: 14-18 bytes
-error_count: 8 bits
+error_count: 8 bits 
 delay: 64 bits
 expires: 64 bits
-Item: Variable lenght text&lt;/p&gt;
+Item: Variable lenght text
 
-&lt;p&gt;````&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
