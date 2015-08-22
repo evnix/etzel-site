@@ -60,6 +60,12 @@
 
 &lt;p&gt;Etzel is built for Robust messaging between applications. It has built-in support for load-balancing and fault tolerance.&lt;/p&gt;
 
+&lt;ul&gt;
+&lt;li&gt;Build distributed applications that scale right from the start&lt;/li&gt;
+&lt;li&gt;Build applications that have no single point of failure&lt;/li&gt;
+&lt;li&gt;Decouple your program into components written in languages best suited for the task&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h3 id=&#34;example:b9bcf8cb73ce4a081a635ad7c0acd9dd&#34;&gt;Example:&lt;/h3&gt;
 
 &lt;p&gt;Let us define some workload i.e. to send emails using PHP(client)&lt;/p&gt;
