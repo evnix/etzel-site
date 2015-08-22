@@ -23,7 +23,7 @@ title = "Etzel Server"
     pre = "<i class='fa fa-heart'></i>"
     weight = 4
     identifier = "4"
-    url = "/lang-drivers/" 
+    url = "/docs/lang-drivers/" 
     
 [[menu.main]]
     name = "About Etzel"
