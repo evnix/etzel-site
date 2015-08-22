@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on Etzel Server</title>
+    <link>http://etzelserver.com/docs/</link>
+    <description>Recent content in Docs on Etzel Server</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Aug 2015 22:03:05 +0530</lastBuildDate>
+    <atom:link href="http://etzelserver.com/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>request response format</title>
+      <link>http://etzelserver.com/docs/internal/req-resp-format/</link>
+      <pubDate>Sat, 22 Aug 2015 22:03:05 +0530</pubDate>
+      
+      <guid>http://etzelserver.com/docs/internal/req-resp-format/</guid>
+      <description>
+
+&lt;p&gt;All messages are sent and received in JSON format.&lt;/p&gt;
+
+&lt;h3 id=&#34;subscribe-to-queue:1eb3d0ea3fb1616138ff9db983c03a24&#34;&gt;Subscribe to queue&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;cmd&amp;quot;:&amp;quot;SUB&amp;quot;,
+    &amp;quot;qname&amp;quot;: &amp;quot;$Q_NAME&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;fetch-a-message-from-queue:1eb3d0ea3fb1616138ff9db983c03a24&#34;&gt;Fetch a message from Queue&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;cmd&amp;quot;:&amp;quot;FET&amp;quot;,
+    &amp;quot;qname&amp;quot;: &amp;quot;$Q_NAME&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;publish:1eb3d0ea3fb1616138ff9db983c03a24&#34;&gt;Publish&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;cmd&amp;quot;:&amp;quot;PUB&amp;quot;,
+    &amp;quot;qname&amp;quot;: &amp;quot;$Q_NAME&amp;quot;,
+    &amp;quot;message&amp;quot;: &amp;quot;$message&amp;quot;,
+    &amp;quot;delay&amp;quot;: 0,
+    &amp;quot;expires&amp;quot;: 0, 
+    &amp;quot;priority&amp;quot;: 0
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Optional messages&amp;rsquo; parameters:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;delay&lt;/code&gt;: The item will not be available on the queue until this many seconds have passed.
+Default is 0 seconds. Maximum is 365 days(in seconds).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;expires&lt;/code&gt;: How long in seconds to keep the item on the queue before it is deleted.
+Default is 0(365 days).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;priority&lt;/code&gt;: It can be either -20,0,20 (High, Medium, Low).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;inform-server-that-you-are-going-to-sleep:1eb3d0ea3fb1616138ff9db983c03a24&#34;&gt;inform server that you are going to SLEEP&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;cmd&amp;quot;:&amp;quot;ISLP&amp;quot;,
+    &amp;quot;qname&amp;quot;: &amp;quot;$Q_NAME&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;response-from-server:1eb3d0ea3fb1616138ff9db983c03a24&#34;&gt;Response From server:&lt;/h2&gt;
+
+&lt;h3 id=&#34;no-queue-found:1eb3d0ea3fb1616138ff9db983c03a24&#34;&gt;No Queue Found&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;cmd&amp;quot;:&amp;quot;nok&amp;quot;,
+    &amp;quot;err&amp;quot;: &amp;quot;Q_NOT_FOUND&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;no-message-available-in-the-requested-queue:1eb3d0ea3fb1616138ff9db983c03a24&#34;&gt;No Message Available in the requested Queue&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;cmd&amp;quot;:&amp;quot;nomsg&amp;quot;,
+    &amp;quot;qname&amp;quot;: &amp;quot;$Q_NAME&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;it-is-ok-to-go-to-sleep:1eb3d0ea3fb1616138ff9db983c03a24&#34;&gt;It is ok to go to sleep&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;cmd&amp;quot;:&amp;quot;okslp&amp;quot;,
+    &amp;quot;qname&amp;quot;: &amp;quot;$Q_NAME&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;message-available-in-the-requested-queue:1eb3d0ea3fb1616138ff9db983c03a24&#34;&gt;Message Available in the requested Queue&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;cmd&amp;quot;: &amp;quot;msg&amp;quot;,
+    &amp;quot;qname&amp;quot;: &amp;quot;$Q_NAME&amp;quot;,
+    &amp;quot;uid&amp;quot;: &amp;quot;$uid&amp;quot;,
+    &amp;quot;error_count&amp;quot;: &amp;quot;$count&amp;quot;,
+    &amp;quot;msg&amp;quot;: &amp;quot;$message&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;wake-up-the-client-for-a-particular-queue:1eb3d0ea3fb1616138ff9db983c03a24&#34;&gt;Wake up the client for a particular Queue&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;cmd&amp;quot;:&amp;quot;awk&amp;quot;,
+    &amp;quot;qname&amp;quot;: &amp;quot;$Q_NAME&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
