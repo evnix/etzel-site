@@ -6,8 +6,113 @@
     <description>Recent content in Docs on Etzel Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2015 23:02:31 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2015 23:39:49 +0530</lastBuildDate>
     <atom:link href="http://etzelserver.com/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Javascript Driver</title>
+      <link>http://etzelserver.com/docs/drivers/js/</link>
+      <pubDate>Sat, 22 Aug 2015 23:39:49 +0530</pubDate>
+      
+      <guid>http://etzelserver.com/docs/drivers/js/</guid>
+      <description>
+
+&lt;p&gt;You can install the node client by opening a command prompt and using the following command
+Note: this library can also be executed inside a browser.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install etzelclient
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;then include the library in your .js file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;require(&#39;etzelclient&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;1-publish-queuename-message-options:615e3f22fa9cd8f45adc27486278fdbb&#34;&gt;1. publish(queuename,message,options)&lt;/h4&gt;
+
+&lt;p&gt;This pushes a message to etzel server.The arguments required are queuename (which is the name of the queue you want to pubish to), message (which is the message you want to publish to the queue),options includes delay and expire functionality . The options argument  can be used when the message insert needs to be delayed or messaged validity needs to be expired. Options isn&amp;rsquo;t an obligatory argument. The delay and expiry is taken in seconds.&lt;/p&gt;
+
+&lt;p&gt;Example:-&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;etzelclient=require(&amp;quot;etzelclient&amp;quot;);
+
+ec=new etzelclient(&amp;quot;ws://localhost:8080/connect&amp;quot;);
+ec.onopen=function(){
+    ec.publish(&#39;test&#39;,&#39;hi&#39;);
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;test is the queuename,hi is the message and the delay is 0 seconds&lt;/p&gt;
+
+&lt;p&gt;additional options for publish:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    ec.publish(&#39;test&#39;,&#39;hi&#39;,{delay:5,expires:3600,priority:0});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;delay&lt;/code&gt;: The item will not be available on the queue until this many seconds have passed.
+Default is 0 seconds. Maximum is 365 days(in seconds).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;expires&lt;/code&gt;: How long in seconds to keep the item on the queue before it is deleted.
+Default is 0(365 days).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;priority&lt;/code&gt;: It can be either -20,0,20 (High, Medium, Low).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-subscribe-queuename-callback:615e3f22fa9cd8f45adc27486278fdbb&#34;&gt;2. subscribe(queuename,callback)&lt;/h4&gt;
+
+&lt;p&gt;The subscribe function is fetches a message from the etzel server. The argument required are queuename which is the name of the you want to fetch the data from, callback is a custom fucntion which you have you provide.&lt;/p&gt;
+
+&lt;p&gt;Example:-&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;etzelclient=require(&amp;quot;etzelclient&amp;quot;);
+
+ec=new etzelclient(&amp;quot;ws://localhost:8080/connect&amp;quot;);
+
+//function which the end user writes
+function mycallback(data){
+
+    console.log(data.msg+&amp;quot; from the queue&amp;quot;);
+    ec.acknowledge(&amp;quot;test&amp;quot;,data.uid);
+
+}
+ec.onopen=function(){
+    ec.subscribe(&amp;quot;test&amp;quot;,mycallback);
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here test is the queuename.
+An entity fetching data from the specific queue is called a worker. You can multiple workers working on the same queue. The server facilitates load balancing amongst the workers. Fetching a message will delete the message from the queue &lt;strong&gt;temporarily&lt;/strong&gt;(re-queued after 60 seconds).&lt;/p&gt;
+
+&lt;p&gt;acknowledge(queuename,uid)&lt;/p&gt;
+
+&lt;p&gt;To delete it permanently , we use the acknowledge function which deletes/acknowledges a specific message from the queue. The arguments required are queuename and the id of the message you want to acknowledge.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Language drivers</title>
+      <link>http://etzelserver.com/docs/lang-drivers/</link>
+      <pubDate>Sat, 22 Aug 2015 23:06:44 +0530</pubDate>
+      
+      <guid>http://etzelserver.com/docs/lang-drivers/</guid>
+      <description>
+
+&lt;h3 id=&#34;nodejs-javascript:e5338c31ed7ced8d1fd833de1552978c&#34;&gt;Nodejs/Javascript&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://etzelserver.com/docs/drivers/js&#34;&gt;EtzelClient on NPM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;php:e5338c31ed7ced8d1fd833de1552978c&#34;&gt;PHP&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[EtzelClient on Composer]()&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Data format</title>

@@ -1,6 +1,6 @@
 +++
 date = "2015-08-22T23:02:31+05:30"
-draft = true
+draft = false
 title = "Data format"
 
 +++

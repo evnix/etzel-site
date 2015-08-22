@@ -1,6 +1,6 @@
 +++
 date = "2015-08-18T10:35:58+05:30"
-draft = true
+draft = false
 title = "Etzel Server"
 
 +++
