@@ -5,7 +5,7 @@ title = "About"
 
 +++
 
-Etzel is a Job Delegation & a queueing server.
+Etzel is a Job Delegation and queueing server.
 
 We built etzel to solve the problem of existing queueing softwares which were bulky and slow.
 we desired something fast & lightweight, which would be as reliable & robust as any enterprise software.
@@ -19,6 +19,6 @@ Etzel uses a lot of libraries without which this project wouldn't be possible.
 
 ### Lead Developers
 
-Avinash D' Silva
+Avinash D' Silva [[Linkedin](https://in.linkedin.com/in/avinashdsilva)]
 
-Gavin D' Mello
+Gavin D' Mello [[Linkedin](https://in.linkedin.com/pub/gavin-d-mello/84/5b0/b55)]
