@@ -20,4 +20,5 @@ Etzel uses a lot of libraries without which this project wouldn't be possible.
 ### Lead Developers
 
 Avinash D' Silva
+
 Gavin D' Mello
