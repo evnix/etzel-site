@@ -65,6 +65,54 @@
       
   <div class="post">
     <h1 class="post-title">
+      <a href="http://etzelserver.com/docs/internal/data-format/">
+        Data format
+      </a>
+    </h1>
+
+    <span style="" class="post-date">Sat, Aug 22, 2015</span>
+
+    
+
+<h3 id="queue-element-format-in-memory:80929b78b7ce01a4c5852f6c3b86083d">Queue Element format in Memory</h3>
+
+<pre><code>error_count|expires|UidSize|uid|Item
+
+Size of each block in bits:
+&lt;&lt;error_count:8&gt;&gt;,&lt;&lt;Expires:64&gt;&gt;,&lt;&lt;Uid_size:16&gt;&gt;,Uid,Msg
+</code></pre>
+
+<h3 id="queue-element-format-on-disk:80929b78b7ce01a4c5852f6c3b86083d">Queue element format on disk</h3>
+
+<p>The queue elements are stored in a key value store in the following format.
+````
+1. DATA</p>
+
+<p>let us divide DATA which is made up of a key and value.</p>
+
+<ol>
+<li>Key: Value</li>
+</ol>
+
+<p>divide them further</p>
+
+<ol>
+<li>Qname-uid:  error_count|Delay|expires|Item</li>
+</ol>
+
+<p>Qname: Variable length text
+Uid: 14-18 bytes
+error_count: 8 bits
+delay: 64 bits
+expires: 64 bits
+Item: Variable lenght text</p>
+
+<p>````</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="http://etzelserver.com/docs/internal/server-algorithm/">
         Server algorithm
       </a>

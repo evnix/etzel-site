@@ -6,8 +6,53 @@
     <description>Recent content in Docs on Etzel Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2015 22:49:39 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2015 23:02:31 +0530</lastBuildDate>
     <atom:link href="http://etzelserver.com/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Data format</title>
+      <link>http://etzelserver.com/docs/internal/data-format/</link>
+      <pubDate>Sat, 22 Aug 2015 23:02:31 +0530</pubDate>
+      
+      <guid>http://etzelserver.com/docs/internal/data-format/</guid>
+      <description>
+
+&lt;h3 id=&#34;queue-element-format-in-memory:80929b78b7ce01a4c5852f6c3b86083d&#34;&gt;Queue Element format in Memory&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;error_count|expires|UidSize|uid|Item
+
+Size of each block in bits:
+&amp;lt;&amp;lt;error_count:8&amp;gt;&amp;gt;,&amp;lt;&amp;lt;Expires:64&amp;gt;&amp;gt;,&amp;lt;&amp;lt;Uid_size:16&amp;gt;&amp;gt;,Uid,Msg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;queue-element-format-on-disk:80929b78b7ce01a4c5852f6c3b86083d&#34;&gt;Queue element format on disk&lt;/h3&gt;
+
+&lt;p&gt;The queue elements are stored in a key value store in the following format.
+````
+1. DATA&lt;/p&gt;
+
+&lt;p&gt;let us divide DATA which is made up of a key and value.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Key: Value&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;divide them further&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Qname-uid:  error_count|Delay|expires|Item&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Qname: Variable length text
+Uid: 14-18 bytes
+error_count: 8 bits
+delay: 64 bits
+expires: 64 bits
+Item: Variable lenght text&lt;/p&gt;
+
+&lt;p&gt;````&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Server algorithm</title>
