@@ -6,8 +6,33 @@
     <description>Recent content on Etzel Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Aug 2015 13:00:41 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2015 21:24:53 +0530</lastBuildDate>
     <atom:link href="http://etzelserver.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>documentation</title>
+      <link>http://etzelserver.com/documentation/</link>
+      <pubDate>Sat, 22 Aug 2015 21:24:53 +0530</pubDate>
+      
+      <guid>http://etzelserver.com/documentation/</guid>
+      <description>
+
+&lt;h3 id=&#34;general:519b3731c0b3c26bafa462d3efdcc120&#34;&gt;General&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://etzelserver.com/getstarted/&#34;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;etzel-internals:519b3731c0b3c26bafa462d3efdcc120&#34;&gt;Etzel Internals&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Request &amp;amp; Response format&lt;/li&gt;
+&lt;li&gt;Worker Alogrithm/Flow&lt;/li&gt;
+&lt;li&gt;Server Algorithm/Flow&lt;/li&gt;
+&lt;li&gt;Data format&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Getting started</title>
@@ -138,8 +163,8 @@ you could have hundreds of workers connected to Etzel to do the processing and E
 
 &lt;p&gt;Etzel is a Job Delegation and queueing server.&lt;/p&gt;
 
-&lt;p&gt;We built etzel to solve the problem of existing queueing softwares which were bulky and slow.
-we desired something fast &amp;amp; lightweight, which would be as reliable &amp;amp; robust as any enterprise software.&lt;/p&gt;
+&lt;p&gt;We built etzel to solve the problem of existing queueing softwares which were either proprietary or bulky or slow.
+we desired something fast, lightweight and well documented, which would be as reliable &amp;amp; robust as any enterprise software.&lt;/p&gt;
 
 &lt;p&gt;Another goal of Etzel is to keep things simple. Etzel uses a simple protocol based on websockets.
 This makes Etzel as easy to connect as a HTTP service and yet have speeds similar to a raw TCP channel.&lt;/p&gt;

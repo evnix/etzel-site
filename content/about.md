@@ -7,8 +7,8 @@ title = "About"
 
 Etzel is a Job Delegation and queueing server.
 
-We built etzel to solve the problem of existing queueing softwares which were bulky and slow.
-we desired something fast & lightweight, which would be as reliable & robust as any enterprise software.
+We built etzel to solve the problem of existing queueing softwares which were either proprietary or bulky or slow.
+we desired something fast, lightweight and well documented, which would be as reliable & robust as any enterprise software.
 
 Another goal of Etzel is to keep things simple. Etzel uses a simple protocol based on websockets.
 This makes Etzel as easy to connect as a HTTP service and yet have speeds similar to a raw TCP channel.
