@@ -65,8 +65,119 @@
       
   <div class="post">
     <h1 class="post-title">
+      <a href="http://etzelserver.com/docs/internal/req-resp-format/">
+        request response format
+      </a>
+    </h1>
+
+    <span style="" class="post-date">Sat, Aug 22, 2015</span>
+
+    
+
+<p>All messages are sent and received in JSON format.</p>
+
+<h3 id="subscribe-to-queue:1eb3d0ea3fb1616138ff9db983c03a24">Subscribe to queue</h3>
+
+<pre><code>{
+    &quot;cmd&quot;:&quot;SUB&quot;,
+    &quot;qname&quot;: &quot;$Q_NAME&quot;
+}
+</code></pre>
+
+<h3 id="fetch-a-message-from-queue:1eb3d0ea3fb1616138ff9db983c03a24">Fetch a message from Queue</h3>
+
+<pre><code>{
+    &quot;cmd&quot;:&quot;FET&quot;,
+    &quot;qname&quot;: &quot;$Q_NAME&quot;
+}
+</code></pre>
+
+<h3 id="publish:1eb3d0ea3fb1616138ff9db983c03a24">Publish</h3>
+
+<pre><code>{
+    &quot;cmd&quot;:&quot;PUB&quot;,
+    &quot;qname&quot;: &quot;$Q_NAME&quot;,
+    &quot;message&quot;: &quot;$message&quot;,
+    &quot;delay&quot;: 0,
+    &quot;expires&quot;: 0, 
+    &quot;priority&quot;: 0
+
+}
+</code></pre>
+
+<p><strong>Optional messages&rsquo; parameters:</strong></p>
+
+<ul>
+<li><p><code>delay</code>: The item will not be available on the queue until this many seconds have passed.
+Default is 0 seconds. Maximum is 365 days(in seconds).</p></li>
+
+<li><p><code>expires</code>: How long in seconds to keep the item on the queue before it is deleted.
+Default is 0(365 days).</p></li>
+
+<li><p><code>priority</code>: It can be either -20,0,20 (High, Medium, Low).</p></li>
+</ul>
+
+<h3 id="inform-server-that-you-are-going-to-sleep:1eb3d0ea3fb1616138ff9db983c03a24">inform server that you are going to SLEEP</h3>
+
+<pre><code>{
+    &quot;cmd&quot;:&quot;ISLP&quot;,
+    &quot;qname&quot;: &quot;$Q_NAME&quot;
+}
+</code></pre>
+
+<hr />
+
+<h2 id="response-from-server:1eb3d0ea3fb1616138ff9db983c03a24">Response From server:</h2>
+
+<h3 id="no-queue-found:1eb3d0ea3fb1616138ff9db983c03a24">No Queue Found</h3>
+
+<pre><code>{
+    &quot;cmd&quot;:&quot;nok&quot;,
+    &quot;err&quot;: &quot;Q_NOT_FOUND&quot;
+}
+</code></pre>
+
+<h3 id="no-message-available-in-the-requested-queue:1eb3d0ea3fb1616138ff9db983c03a24">No Message Available in the requested Queue</h3>
+
+<pre><code>{
+    &quot;cmd&quot;:&quot;nomsg&quot;,
+    &quot;qname&quot;: &quot;$Q_NAME&quot;
+}
+</code></pre>
+
+<h3 id="it-is-ok-to-go-to-sleep:1eb3d0ea3fb1616138ff9db983c03a24">It is ok to go to sleep</h3>
+
+<pre><code>{
+    &quot;cmd&quot;:&quot;okslp&quot;,
+    &quot;qname&quot;: &quot;$Q_NAME&quot;
+}
+</code></pre>
+
+<h3 id="message-available-in-the-requested-queue:1eb3d0ea3fb1616138ff9db983c03a24">Message Available in the requested Queue</h3>
+
+<pre><code>{
+    &quot;cmd&quot;: &quot;msg&quot;,
+    &quot;qname&quot;: &quot;$Q_NAME&quot;,
+    &quot;uid&quot;: &quot;$uid&quot;,
+    &quot;error_count&quot;: &quot;$count&quot;,
+    &quot;msg&quot;: &quot;$message&quot;
+}
+</code></pre>
+
+<h3 id="wake-up-the-client-for-a-particular-queue:1eb3d0ea3fb1616138ff9db983c03a24">Wake up the client for a particular Queue</h3>
+
+<pre><code>{
+    &quot;cmd&quot;:&quot;awk&quot;,
+    &quot;qname&quot;: &quot;$Q_NAME&quot;
+}
+</code></pre>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="http://etzelserver.com/documentation/">
-        documentation
+        Documentation
       </a>
     </h1>
 
@@ -83,7 +194,7 @@
 <h3 id="etzel-internals:519b3731c0b3c26bafa462d3efdcc120">Etzel Internals</h3>
 
 <ul>
-<li>Request &amp; Response format</li>
+<li><a href="/docs/internal/req-resp-format/">Request &amp; Response format</a></li>
 <li>Worker Alogrithm/Flow</li>
 <li>Server Algorithm/Flow</li>
 <li>Data format</li>

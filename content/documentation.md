@@ -1,7 +1,7 @@
 +++
 date = "2015-08-22T21:24:53+05:30"
 draft = false
-title = "documentation"
+title = "Documentation"
 
 +++
 
@@ -11,7 +11,7 @@ title = "documentation"
 
 ### Etzel Internals
 
-- Request & Response format
+- [Request & Response format](/docs/internal/req-resp-format/)
 - Worker Alogrithm/Flow
 - Server Algorithm/Flow
 - Data format
