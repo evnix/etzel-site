@@ -15,37 +15,15 @@
       <pubDate>Sat, 22 Aug 2015 22:49:39 +0530</pubDate>
       
       <guid>http://etzelserver.com/docs/internal/server-algorithm/</guid>
-      <description>&lt;nav&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#on-subscribe:7abec6c6330e8dbe3e8f868b38416272&#34;&gt;ON_SUBSCRIBE:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#on-publish:7abec6c6330e8dbe3e8f868b38416272&#34;&gt;ON_PUBLISH:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#on-fet-request:7abec6c6330e8dbe3e8f868b38416272&#34;&gt;ON_FET_REQUEST:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#on-ack-del-request:7abec6c6330e8dbe3e8f868b38416272&#34;&gt;ON_ACK/DEL_REQUEST:&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/nav&gt;
+      <description>
 
-&lt;h6 id=&#34;on-subscribe:7abec6c6330e8dbe3e8f868b38416272&#34;&gt;ON_SUBSCRIBE:&lt;/h6&gt;
+&lt;h5 id=&#34;on-subscribe:7abec6c6330e8dbe3e8f868b38416272&#34;&gt;ON_SUBSCRIBE:&lt;/h5&gt;
 
 &lt;pre&gt;&lt;code&gt;   - Spawn a process for client &amp;amp; attach its PID to the group.
    - Example: join_group(Qname,PID) 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h6 id=&#34;on-publish:7abec6c6330e8dbe3e8f868b38416272&#34;&gt;ON_PUBLISH:&lt;/h6&gt;
+&lt;h5 id=&#34;on-publish:7abec6c6330e8dbe3e8f868b38416272&#34;&gt;ON_PUBLISH:&lt;/h5&gt;
 
 &lt;pre&gt;&lt;code&gt;   - IF NO DELAY -&amp;gt; CALL PUBLISH();
    - Else: 
@@ -62,7 +40,7 @@
    - &amp;amp; also write(async) the data to disk by generating required key:value  
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h6 id=&#34;on-fet-request:7abec6c6330e8dbe3e8f868b38416272&#34;&gt;ON_FET_REQUEST:&lt;/h6&gt;
+&lt;h5 id=&#34;on-fet-request:7abec6c6330e8dbe3e8f868b38416272&#34;&gt;ON_FET_REQUEST:&lt;/h5&gt;
 
 &lt;pre&gt;&lt;code&gt;   1. Pop the top of the Queue 
    2. if the element has expired 
@@ -76,7 +54,7 @@
    5. CALL PUBLISH(element); WITH DELAY:60
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h6 id=&#34;on-ack-del-request:7abec6c6330e8dbe3e8f868b38416272&#34;&gt;ON_ACK/DEL_REQUEST:&lt;/h6&gt;
+&lt;h5 id=&#34;on-ack-del-request:7abec6c6330e8dbe3e8f868b38416272&#34;&gt;ON_ACK/DEL_REQUEST:&lt;/h5&gt;
 
 &lt;pre&gt;&lt;code&gt;  - Delete the element from disk
   - PUSH the element to the delete list

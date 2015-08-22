@@ -4,14 +4,14 @@ draft = true
 title = "Server algorithm"
 +++
 
-###### ON_SUBSCRIBE:
+##### ON_SUBSCRIBE:
  
 ```` 
    - Spawn a process for client & attach its PID to the group.
    - Example: join_group(Qname,PID) 
 ````    
     
-###### ON_PUBLISH:
+##### ON_PUBLISH:
   
 ````
    - IF NO DELAY -> CALL PUBLISH();
@@ -29,7 +29,7 @@ PUBLISH()
    - Now this Queue-X Process will accept the element
    - & also write(async) the data to disk by generating required key:value  
 ````
-###### ON_FET_REQUEST:
+##### ON_FET_REQUEST:
 
 ````
    1. Pop the top of the Queue 
@@ -44,7 +44,7 @@ PUBLISH()
    5. CALL PUBLISH(element); WITH DELAY:60
 ````
 
-###### ON_ACK/DEL_REQUEST:
+##### ON_ACK/DEL_REQUEST:
 
 ````
   - Delete the element from disk

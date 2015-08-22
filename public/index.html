@@ -72,37 +72,15 @@
 
     <span style="" class="post-date">Sat, Aug 22, 2015</span>
 
-    <nav>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#on-subscribe:7abec6c6330e8dbe3e8f868b38416272">ON_SUBSCRIBE:</a></li>
-<li><a href="#on-publish:7abec6c6330e8dbe3e8f868b38416272">ON_PUBLISH:</a></li>
-<li><a href="#on-fet-request:7abec6c6330e8dbe3e8f868b38416272">ON_FET_REQUEST:</a></li>
-<li><a href="#on-ack-del-request:7abec6c6330e8dbe3e8f868b38416272">ON_ACK/DEL_REQUEST:</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
+    
 
-<h6 id="on-subscribe:7abec6c6330e8dbe3e8f868b38416272">ON_SUBSCRIBE:</h6>
+<h5 id="on-subscribe:7abec6c6330e8dbe3e8f868b38416272">ON_SUBSCRIBE:</h5>
 
 <pre><code>   - Spawn a process for client &amp; attach its PID to the group.
    - Example: join_group(Qname,PID) 
 </code></pre>
 
-<h6 id="on-publish:7abec6c6330e8dbe3e8f868b38416272">ON_PUBLISH:</h6>
+<h5 id="on-publish:7abec6c6330e8dbe3e8f868b38416272">ON_PUBLISH:</h5>
 
 <pre><code>   - IF NO DELAY -&gt; CALL PUBLISH();
    - Else: 
@@ -119,7 +97,7 @@
    - &amp; also write(async) the data to disk by generating required key:value  
 </code></pre>
 
-<h6 id="on-fet-request:7abec6c6330e8dbe3e8f868b38416272">ON_FET_REQUEST:</h6>
+<h5 id="on-fet-request:7abec6c6330e8dbe3e8f868b38416272">ON_FET_REQUEST:</h5>
 
 <pre><code>   1. Pop the top of the Queue 
    2. if the element has expired 
@@ -133,7 +111,7 @@
    5. CALL PUBLISH(element); WITH DELAY:60
 </code></pre>
 
-<h6 id="on-ack-del-request:7abec6c6330e8dbe3e8f868b38416272">ON_ACK/DEL_REQUEST:</h6>
+<h5 id="on-ack-del-request:7abec6c6330e8dbe3e8f868b38416272">ON_ACK/DEL_REQUEST:</h5>
 
 <pre><code>  - Delete the element from disk
   - PUSH the element to the delete list
