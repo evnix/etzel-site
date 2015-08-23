@@ -5,7 +5,7 @@ title = "Getting started"
 
 +++
 
-Download etzel-server-*.zip from the [download](http://ff) section.
+Download etzel-server-*.zip from the [download](/downloads/) section.
 
 Inside the archive is a directory named `etzel_release`. You should extract this into some appropriate location. The `bin` directory will be found in this directory.
 

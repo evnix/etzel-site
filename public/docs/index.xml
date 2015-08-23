@@ -17,8 +17,9 @@
       <guid>http://etzelserver.com/docs/drivers/js/</guid>
       <description>
 
-&lt;p&gt;You can install the node client by opening a command prompt and using the following command
-Note: this library can also be executed inside a browser.&lt;/p&gt;
+&lt;p&gt;You can install the node client by opening a command prompt and using the following command&lt;/p&gt;
+
+&lt;p&gt;Note: this library can also be executed inside a browser.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;npm install etzelclient
 &lt;/code&gt;&lt;/pre&gt;

@@ -6,8 +6,24 @@
     <description>Recent content on Etzel Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2015 23:39:49 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2015 11:24:05 +0530</lastBuildDate>
     <atom:link href="http://etzelserver.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Downloads</title>
+      <link>http://etzelserver.com/downloads/</link>
+      <pubDate>Sun, 23 Aug 2015 11:24:05 +0530</pubDate>
+      
+      <guid>http://etzelserver.com/downloads/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/evnix/etzel/releases/download/v0.1.0/etzel_release.Linux_x64.0.1.0.tar.gz&#34;&gt;Linux x64 Binary&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/evnix/etzel/releases/download/v0.1.0/etzel_release.Mac_x64.v.0.1.0.zip&#34;&gt;Max x64 Binary&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/evnix/etzel/&#34;&gt;Fork us on Github&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Javascript Driver</title>
@@ -17,8 +33,9 @@
       <guid>http://etzelserver.com/docs/drivers/js/</guid>
       <description>
 
-&lt;p&gt;You can install the node client by opening a command prompt and using the following command
-Note: this library can also be executed inside a browser.&lt;/p&gt;
+&lt;p&gt;You can install the node client by opening a command prompt and using the following command&lt;/p&gt;
+
+&lt;p&gt;Note: this library can also be executed inside a browser.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;npm install etzelclient
 &lt;/code&gt;&lt;/pre&gt;
@@ -373,7 +390,7 @@ Default is 0(365 days).&lt;/p&gt;&lt;/li&gt;
       <pubDate>Tue, 18 Aug 2015 13:00:41 +0530</pubDate>
       
       <guid>http://etzelserver.com/getstarted/</guid>
-      <description>&lt;p&gt;Download etzel-server-*.zip from the &lt;a href=&#34;http://ff&#34;&gt;download&lt;/a&gt; section.&lt;/p&gt;
+      <description>&lt;p&gt;Download etzel-server-*.zip from the &lt;a href=&#34;http://etzelserver.com/downloads/&#34;&gt;download&lt;/a&gt; section.&lt;/p&gt;
 
 &lt;p&gt;Inside the archive is a directory named &lt;code&gt;etzel_release&lt;/code&gt;. You should extract this into some appropriate location. The &lt;code&gt;bin&lt;/code&gt; directory will be found in this directory.&lt;/p&gt;
 

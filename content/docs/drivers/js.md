@@ -6,6 +6,7 @@ title = "Javascript Driver"
 +++
 
 You can install the node client by opening a command prompt and using the following command
+
 Note: this library can also be executed inside a browser.
 
 ````
