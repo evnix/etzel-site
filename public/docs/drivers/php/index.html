@@ -1,0 +1,131 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.14" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> php &middot; Etzel Server </title>
+
+  
+  <link rel="stylesheet" href="http://etzelserver.com/css/poole.css">
+  <link rel="stylesheet" href="http://etzelserver.com/css/syntax.css">
+  <link rel="stylesheet" href="http://etzelserver.com/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Etzel Server" />
+
+
+<link rel="stylesheet" href="/prism/themes/prism.css">
+<script src="/prism/prism.js"></script>
+
+
+</head>
+
+	<body class="">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://etzelserver.com/"><h1>Etzel Server</h1></a>
+      <p class="lead">
+      A Fast & Reliable open source Job delegation & queueing server written in Erlang/OTP. Follow us on <a href="http://twitter.com/etzelserver">@EtzelServer</a>.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+        <li><a href="/getstarted/"> Getting started </a></li>
+      
+        <li><a href="/documentation/"> Documentation </a></li>
+      
+        <li><a href="/docs/lang-drivers/"> Language Drivers </a></li>
+      
+        <li><a href="/about/"> About Etzel </a></li>
+      
+    </ul>
+
+    <p>&copy; 2015. All rights reserved. </p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>php</h1>
+			  <span style="display:none" class="post-date">Sun, Aug 23, 2015</span>
+			      
+
+<pre><code>composer require bat_coder/etzelclient
+
+</code></pre>
+
+<h4 id="1-publish-queuename-message-options:14fa85f82f7cd05b22a291e5527c5ae7">1. publish(queuename,message,options)</h4>
+
+<p>This pushes a message to etzel server.The arguments required are queuename (which is the name of the queue you want to pubish to), message (which is the message you want to publish to the queue),options includes delay and expire functionality . The options argument  can be used when the message insert needs to be delayed or messaged validity needs to be expired. Options isn&rsquo;t an obligatory argument. The delay and expiry is taken in seconds.</p>
+
+<p>Example:-</p>
+
+<pre><code>&lt;?php
+
+$etzel = new EtzelClient(&quot;ws://127.0.0.1:8080/connect&quot;);
+
+$emails= [&quot;abc@example.com&quot;,&quot;def@example.com&quot;,&quot;hij@example.com&quot;];
+
+foreach($emails as $email){
+    
+    $etzel-&gt;publish(&quot;group1&quot;, $email);
+}
+?&gt;
+</code></pre>
+
+<p>test is the queuename,hi is the message and the delay is 0 seconds</p>
+
+<p>additional options for publish:</p>
+
+<pre><code>    $etzel-&gt;publish('test','hi',{delay:5,expires:3600,priority:0});
+</code></pre>
+
+<ul>
+<li><p><code>delay</code>: The item will not be available on the queue until this many seconds have passed.
+Default is 0 seconds. Maximum is 365 days(in seconds).</p></li>
+
+<li><p><code>expires</code>: How long in seconds to keep the item on the queue before it is deleted.
+Default is 0(365 days).</p></li>
+
+<li><p><code>priority</code>: It can be either -20,0,20 (High, Medium, Low).</p></li>
+</ul>
+
+<h4 id="2-subscribe-queuename-callback:14fa85f82f7cd05b22a291e5527c5ae7">2. subscribe(queuename,callback)</h4>
+
+<p>The subscribe function is fetches a message from the etzel server. The argument required are queuename which is the name of the you want to fetch the data from, callback is a custom fucntion which you have you provide.</p>
+
+<p>Example:-</p>
+
+<pre><code>
+    ec-&gt;subscribe(&quot;test&quot;,cb);
+
+</code></pre>
+
+<p>Here test is the queuename.
+An entity fetching data from the specific queue is called a worker. You can multiple workers working on the same queue. The server facilitates load balancing amongst the workers. Fetching a message will delete the message from the queue <strong>temporarily</strong>(re-queued after 60 seconds).</p>
+
+<p>acknowledge(queuename,uid)</p>
+
+<p>To delete it permanently , we use the acknowledge function which deletes/acknowledges a specific message from the queue. The arguments required are queuename and the id of the message you want to acknowledge.</p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>
