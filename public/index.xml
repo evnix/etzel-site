@@ -194,7 +194,7 @@ An entity fetching data from the specific queue is called a worker. You can mult
 &lt;h3 id=&#34;php:e5338c31ed7ced8d1fd833de1552978c&#34;&gt;PHP&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;[EtzelClient on Composer]()&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://etzelserver.com/docs/drivers/php&#34;&gt;EtzelClient on Composer&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
