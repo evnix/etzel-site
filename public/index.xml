@@ -6,8 +6,76 @@
     <description>Recent content on Etzel Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Aug 2015 11:24:05 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2015 11:33:19 +0530</lastBuildDate>
     <atom:link href="http://etzelserver.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>php</title>
+      <link>http://etzelserver.com/docs/drivers/php/</link>
+      <pubDate>Sun, 23 Aug 2015 11:33:19 +0530</pubDate>
+      
+      <guid>http://etzelserver.com/docs/drivers/php/</guid>
+      <description>
+
+&lt;pre&gt;&lt;code&gt;composer require bat_coder/etzelclient
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;1-publish-queuename-message-options:14fa85f82f7cd05b22a291e5527c5ae7&#34;&gt;1. publish(queuename,message,options)&lt;/h4&gt;
+
+&lt;p&gt;This pushes a message to etzel server.The arguments required are queuename (which is the name of the queue you want to pubish to), message (which is the message you want to publish to the queue),options includes delay and expire functionality . The options argument  can be used when the message insert needs to be delayed or messaged validity needs to be expired. Options isn&amp;rsquo;t an obligatory argument. The delay and expiry is taken in seconds.&lt;/p&gt;
+
+&lt;p&gt;Example:-&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+
+$etzel = new EtzelClient(&amp;quot;ws://127.0.0.1:8080/connect&amp;quot;);
+
+$emails= [&amp;quot;abc@example.com&amp;quot;,&amp;quot;def@example.com&amp;quot;,&amp;quot;hij@example.com&amp;quot;];
+
+foreach($emails as $email){
+    
+    $etzel-&amp;gt;publish(&amp;quot;group1&amp;quot;, $email);
+}
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;test is the queuename,hi is the message and the delay is 0 seconds&lt;/p&gt;
+
+&lt;p&gt;additional options for publish:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $etzel-&amp;gt;publish(&#39;test&#39;,&#39;hi&#39;,{delay:5,expires:3600,priority:0});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;delay&lt;/code&gt;: The item will not be available on the queue until this many seconds have passed.
+Default is 0 seconds. Maximum is 365 days(in seconds).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;expires&lt;/code&gt;: How long in seconds to keep the item on the queue before it is deleted.
+Default is 0(365 days).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;priority&lt;/code&gt;: It can be either -20,0,20 (High, Medium, Low).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-subscribe-queuename-callback:14fa85f82f7cd05b22a291e5527c5ae7&#34;&gt;2. subscribe(queuename,callback)&lt;/h4&gt;
+
+&lt;p&gt;The subscribe function is fetches a message from the etzel server. The argument required are queuename which is the name of the you want to fetch the data from, callback is a custom fucntion which you have you provide.&lt;/p&gt;
+
+&lt;p&gt;Example:-&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+    ec-&amp;gt;subscribe(&amp;quot;test&amp;quot;,cb);
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here test is the queuename.
+An entity fetching data from the specific queue is called a worker. You can multiple workers working on the same queue. The server facilitates load balancing amongst the workers. Fetching a message will delete the message from the queue &lt;strong&gt;temporarily&lt;/strong&gt;(re-queued after 60 seconds).&lt;/p&gt;
+
+&lt;p&gt;acknowledge(queuename,uid)&lt;/p&gt;
+
+&lt;p&gt;To delete it permanently , we use the acknowledge function which deletes/acknowledges a specific message from the queue. The arguments required are queuename and the id of the message you want to acknowledge.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Downloads</title>
