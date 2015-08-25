@@ -84,9 +84,9 @@ An entity fetching data from the specific queue is called a worker. You can mult
       
       <guid>http://etzelserver.com/downloads/</guid>
       <description>&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/evnix/etzel/releases/download/v0.1.0/etzel_release.Linux_x64.0.1.0.tar.gz&#34;&gt;Linux x64 Binary&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/evnix/etzel/releases/download/v.0.2.0/etzel_release-Linux-64bit-v0.2.zip&#34;&gt;Linux x64 Binary&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/evnix/etzel/releases/download/v0.1.0/etzel_release.Mac_x64.v.0.1.0.zip&#34;&gt;Max x64 Binary&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/evnix/etzel/releases/download/v.0.2.0/etzel_release.Mac_x64.v.0.2.zip&#34;&gt;Mac x64 Binary&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/evnix/etzel/&#34;&gt;Fork us on Github&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;

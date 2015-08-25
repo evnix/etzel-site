@@ -7,8 +7,8 @@ title = "Downloads"
 
 
 
-- [Linux x64 Binary](https://github.com/evnix/etzel/releases/download/v0.1.0/etzel_release.Linux_x64.0.1.0.tar.gz) 
+- [Linux x64 Binary](https://github.com/evnix/etzel/releases/download/v.0.2.0/etzel_release-Linux-64bit-v0.2.zip) 
 
-- [Max x64 Binary](https://github.com/evnix/etzel/releases/download/v0.1.0/etzel_release.Mac_x64.v.0.1.0.zip) 
+- [Mac x64 Binary](https://github.com/evnix/etzel/releases/download/v.0.2.0/etzel_release.Mac_x64.v.0.2.zip) 
 
 - [Fork us on Github](https://github.com/evnix/etzel/)
