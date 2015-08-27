@@ -17,7 +17,7 @@
       <guid>http://etzelserver.com/docs/drivers/php/</guid>
       <description>
 
-&lt;pre&gt;&lt;code&gt;composer require bat_coder/etzelclient
+&lt;pre&gt;&lt;code&gt;composer require bat_coder/etzelclient:dev-master
 
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -498,8 +498,7 @@ Default is 0(365 days).&lt;/p&gt;&lt;/li&gt;
 
 &lt;p&gt;A Fast &amp;amp; Reliable open source Job delegation &amp;amp; queueing server.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://etzelserver.com/images/etzel.png&#34; alt=&#34;Etzel Server&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://etzelserver.com/images/etzel.png&#34; alt=&#34;Etzel Server&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Etzel is built for Robust messaging between applications. It has built-in support for load-balancing and fault tolerance.&lt;/p&gt;
 

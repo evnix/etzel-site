@@ -6,7 +6,7 @@ title = "PHP Driver"
 +++
 
 ````
-composer require bat_coder/etzelclient
+composer require bat_coder/etzelclient:dev-master
 
 ````
 

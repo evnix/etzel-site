@@ -17,7 +17,7 @@
       <guid>http://etzelserver.com/docs/drivers/php/</guid>
       <description>
 
-&lt;pre&gt;&lt;code&gt;composer require bat_coder/etzelclient
+&lt;pre&gt;&lt;code&gt;composer require bat_coder/etzelclient:dev-master
 
 &lt;/code&gt;&lt;/pre&gt;
 
