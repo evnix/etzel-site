@@ -12,3 +12,7 @@ title = "Language drivers"
 ### PHP
 
 - [EtzelClient on Composer](/docs/drivers/php)
+
+### C# / .NET
+
+- [EtzelClient on NuGet](/docs/drivers/dotnet)

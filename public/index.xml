@@ -305,6 +305,12 @@ An entity fetching data from the specific queue is called a worker. You can mult
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://etzelserver.com/docs/drivers/php&#34;&gt;EtzelClient on Composer&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h3 id=&#34;c-net:e5338c31ed7ced8d1fd833de1552978c&#34;&gt;C# / .NET&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://etzelserver.com/docs/drivers/dotnet&#34;&gt;EtzelClient on NuGet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
