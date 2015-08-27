@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docs on Etzel Server</title>
-    <link>http://localhost:1313/docs/</link>
+    <link>http://etzelserver.com/docs/</link>
     <description>Recent content in Docs on Etzel Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Aug 2015 13:11:05 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://etzelserver.com/docs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>C# / .NET Driver</title>
-      <link>http://localhost:1313/docs/drivers/dotnet/</link>
+      <link>http://etzelserver.com/docs/drivers/dotnet/</link>
       <pubDate>Thu, 27 Aug 2015 13:11:05 +0530</pubDate>
       
-      <guid>http://localhost:1313/docs/drivers/dotnet/</guid>
+      <guid>http://etzelserver.com/docs/drivers/dotnet/</guid>
       <description>
 
 &lt;p&gt;using NuGet Console in Visual Studio&lt;/p&gt;
@@ -122,10 +122,10 @@ An entity fetching data from the specific queue is called a worker. You can mult
     
     <item>
       <title>PHP Driver</title>
-      <link>http://localhost:1313/docs/drivers/php/</link>
+      <link>http://etzelserver.com/docs/drivers/php/</link>
       <pubDate>Sun, 23 Aug 2015 11:33:19 +0530</pubDate>
       
-      <guid>http://localhost:1313/docs/drivers/php/</guid>
+      <guid>http://etzelserver.com/docs/drivers/php/</guid>
       <description>
 
 &lt;pre&gt;&lt;code&gt;composer require bat_coder/etzelclient:dev-master
@@ -148,7 +148,7 @@ foreach($emails as $email){
     
     $etzel-&amp;gt;publish(&amp;quot;group1&amp;quot;, $email);
 }
-?&amp;gt;
+
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;test is the queuename,hi is the message and the delay is 0 seconds&lt;/p&gt;
@@ -190,10 +190,10 @@ An entity fetching data from the specific queue is called a worker. You can mult
     
     <item>
       <title>Javascript Driver</title>
-      <link>http://localhost:1313/docs/drivers/js/</link>
+      <link>http://etzelserver.com/docs/drivers/js/</link>
       <pubDate>Sat, 22 Aug 2015 23:39:49 +0530</pubDate>
       
-      <guid>http://localhost:1313/docs/drivers/js/</guid>
+      <guid>http://etzelserver.com/docs/drivers/js/</guid>
       <description>
 
 &lt;p&gt;You can install the node client by opening a command prompt and using the following command&lt;/p&gt;
@@ -276,38 +276,38 @@ An entity fetching data from the specific queue is called a worker. You can mult
     
     <item>
       <title>Language drivers</title>
-      <link>http://localhost:1313/docs/lang-drivers/</link>
+      <link>http://etzelserver.com/docs/lang-drivers/</link>
       <pubDate>Sat, 22 Aug 2015 23:06:44 +0530</pubDate>
       
-      <guid>http://localhost:1313/docs/lang-drivers/</guid>
+      <guid>http://etzelserver.com/docs/lang-drivers/</guid>
       <description>
 
 &lt;h3 id=&#34;nodejs-javascript:e5338c31ed7ced8d1fd833de1552978c&#34;&gt;Nodejs/Javascript&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/drivers/js&#34;&gt;EtzelClient on NPM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://etzelserver.com/docs/drivers/js&#34;&gt;EtzelClient on NPM&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;php:e5338c31ed7ced8d1fd833de1552978c&#34;&gt;PHP&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/drivers/php&#34;&gt;EtzelClient on Composer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://etzelserver.com/docs/drivers/php&#34;&gt;EtzelClient on Composer&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;c-net:e5338c31ed7ced8d1fd833de1552978c&#34;&gt;C# / .NET&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/drivers/dotnet&#34;&gt;EtzelClient on NuGet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://etzelserver.com/docs/drivers/dotnet&#34;&gt;EtzelClient on NuGet&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
     
     <item>
       <title>Data format</title>
-      <link>http://localhost:1313/docs/internal/data-format/</link>
+      <link>http://etzelserver.com/docs/internal/data-format/</link>
       <pubDate>Sat, 22 Aug 2015 23:02:31 +0530</pubDate>
       
-      <guid>http://localhost:1313/docs/internal/data-format/</guid>
+      <guid>http://etzelserver.com/docs/internal/data-format/</guid>
       <description>
 
 &lt;h3 id=&#34;queue-element-format-in-memory:80929b78b7ce01a4c5852f6c3b86083d&#34;&gt;Queue Element format in Memory&lt;/h3&gt;
@@ -345,10 +345,10 @@ Item: Variable lenght text
     
     <item>
       <title>Server algorithm</title>
-      <link>http://localhost:1313/docs/internal/server-algorithm/</link>
+      <link>http://etzelserver.com/docs/internal/server-algorithm/</link>
       <pubDate>Sat, 22 Aug 2015 22:49:39 +0530</pubDate>
       
-      <guid>http://localhost:1313/docs/internal/server-algorithm/</guid>
+      <guid>http://etzelserver.com/docs/internal/server-algorithm/</guid>
       <description>
 
 &lt;h5 id=&#34;on-subscribe:7abec6c6330e8dbe3e8f868b38416272&#34;&gt;ON_SUBSCRIBE:&lt;/h5&gt;
@@ -398,10 +398,10 @@ Item: Variable lenght text
     
     <item>
       <title>Worker algorithm</title>
-      <link>http://localhost:1313/docs/internal/worker-algorithm/</link>
+      <link>http://etzelserver.com/docs/internal/worker-algorithm/</link>
       <pubDate>Sat, 22 Aug 2015 22:10:32 +0530</pubDate>
       
-      <guid>http://localhost:1313/docs/internal/worker-algorithm/</guid>
+      <guid>http://etzelserver.com/docs/internal/worker-algorithm/</guid>
       <description>
 
 &lt;h4 id=&#34;awake-mode:2474f55462f9d4c29cab2ced96e05d14&#34;&gt;AWAKE_MODE:&lt;/h4&gt;
@@ -424,10 +424,10 @@ Item: Variable lenght text
     
     <item>
       <title>request response format</title>
-      <link>http://localhost:1313/docs/internal/req-resp-format/</link>
+      <link>http://etzelserver.com/docs/internal/req-resp-format/</link>
       <pubDate>Sat, 22 Aug 2015 22:03:05 +0530</pubDate>
       
-      <guid>http://localhost:1313/docs/internal/req-resp-format/</guid>
+      <guid>http://etzelserver.com/docs/internal/req-resp-format/</guid>
       <description>
 
 &lt;p&gt;All messages are sent and received in JSON format.&lt;/p&gt;
