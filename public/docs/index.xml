@@ -6,8 +6,117 @@
     <description>Recent content in Docs on Etzel Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Aug 2015 11:33:19 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2015 13:11:05 +0530</lastBuildDate>
     <atom:link href="http://etzelserver.com/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>C# / .NET Driver</title>
+      <link>http://etzelserver.com/docs/drivers/dotnet/</link>
+      <pubDate>Thu, 27 Aug 2015 13:11:05 +0530</pubDate>
+      
+      <guid>http://etzelserver.com/docs/drivers/dotnet/</guid>
+      <description>
+
+&lt;p&gt;using NuGet Console in Visual Studio&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PM&amp;gt; Install-Package EtzelClient
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;publish-example:9758dc2ecfa9a309cef2dafc8e331f77&#34;&gt;Publish Example&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;class Publish
+   {
+       static void Main(string[] args)
+       {
+           Etzel.EtzelClient e = null;
+           try
+           {
+               e = new Etzel.EtzelClient(&amp;quot;ws://192.168.0.91:8080/connect&amp;quot;);
+               //specify the host
+               e.publish(&amp;quot;myqueue1&amp;quot;, &amp;quot;mymessage&amp;quot;);
+               //publish a message to the queue
+           }
+           catch (Exception ex)
+           {
+               Console.Write(ex.Message);
+           }
+           finally
+           {
+               e = null;
+           }
+       }
+   }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;subscribe-example:9758dc2ecfa9a309cef2dafc8e331f77&#34;&gt;Subscribe Example&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;class Subscribe
+   {
+       static void Main(string[] args)
+       {
+           Etzel.EtzelClient e = null;
+           try
+           {
+               //specify the host
+               e = new Etzel.EtzelClient(&amp;quot;ws://192.168.0.91:8080/connect&amp;quot;);
+
+               //The callback that needs to be given to the subscribe function
+               Etzel.EtzelClient.Tqbacks func = delegate(Etzel.Dtpl data)
+               {
+
+                   Console.WriteLine(data.msg);
+               };
+
+               //subscribes and fetches the message from the queue
+               e.subscribe(&amp;quot;myqueue1&amp;quot;, func);
+
+               //don&#39;t let the main program exit,
+               //so that the callback is called for new messages
+               while (true)
+               {
+                   System.Threading.Thread.Sleep(100000);
+               }
+
+           }
+           catch (Exception ex)
+           {
+               Console.Write(ex.Message);
+           }
+           finally
+           {
+               e = null;
+           }
+       }
+   }
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;functions:9758dc2ecfa9a309cef2dafc8e331f77&#34;&gt;Functions:&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-publish-queuename-message-options:9758dc2ecfa9a309cef2dafc8e331f77&#34;&gt;1. publish(queuename,message,options)&lt;/h4&gt;
+
+&lt;p&gt;This pushes a message to etzel server.The arguments required are queuename (which is the name of the queue you want to pubish to), message (which is the message you want to publish to the queue),options includes delay and expire functionality . The options argument  can be used when the message insert needs to be delayed or messaged validity needs to be expired. Options isn&amp;rsquo;t an obligatory argument. The delay and expiry is taken in seconds.&lt;/p&gt;
+
+&lt;h4 id=&#34;2-subscribe-queuename-callback:9758dc2ecfa9a309cef2dafc8e331f77&#34;&gt;2. subscribe(queuename,callback)&lt;/h4&gt;
+
+&lt;p&gt;The subscribe function is fetches a message from the etzel server. The argument required are queueName which is the name of the Queue you want to fetch the data from, callback is a custom fucntion which you have to provide.&lt;/p&gt;
+
+&lt;p&gt;Example:-&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+    ec.subscribe(&amp;quot;test&amp;quot;,cb);
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here test is the queuename.
+An entity fetching data from the specific queue is called a worker. You can multiple workers working on the same queue. The server facilitates load balancing amongst the workers. Fetching a message will delete the message from the queue &lt;strong&gt;temporarily&lt;/strong&gt;(re-queued after 60 seconds).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;e.acknowledge(queuename,uid)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To delete it permanently , we use the acknowledge function which deletes/acknowledges a specific message from the queue. The arguments required are queuename and the id of the message you want to acknowledge.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>PHP Driver</title>

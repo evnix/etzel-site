@@ -65,6 +65,118 @@
       
   <div class="post">
     <h1 class="post-title">
+      <a href="http://etzelserver.com/docs/drivers/dotnet/">
+        C# / .NET Driver
+      </a>
+    </h1>
+
+    <span style="" class="post-date">Thu, Aug 27, 2015</span>
+
+    
+
+<p>using NuGet Console in Visual Studio</p>
+
+<pre><code>PM&gt; Install-Package EtzelClient
+</code></pre>
+
+<h4 id="publish-example:9758dc2ecfa9a309cef2dafc8e331f77">Publish Example</h4>
+
+<pre><code>class Publish
+   {
+       static void Main(string[] args)
+       {
+           Etzel.EtzelClient e = null;
+           try
+           {
+               e = new Etzel.EtzelClient(&quot;ws://192.168.0.91:8080/connect&quot;);
+               //specify the host
+               e.publish(&quot;myqueue1&quot;, &quot;mymessage&quot;);
+               //publish a message to the queue
+           }
+           catch (Exception ex)
+           {
+               Console.Write(ex.Message);
+           }
+           finally
+           {
+               e = null;
+           }
+       }
+   }
+</code></pre>
+
+<h4 id="subscribe-example:9758dc2ecfa9a309cef2dafc8e331f77">Subscribe Example</h4>
+
+<pre><code>class Subscribe
+   {
+       static void Main(string[] args)
+       {
+           Etzel.EtzelClient e = null;
+           try
+           {
+               //specify the host
+               e = new Etzel.EtzelClient(&quot;ws://192.168.0.91:8080/connect&quot;);
+
+               //The callback that needs to be given to the subscribe function
+               Etzel.EtzelClient.Tqbacks func = delegate(Etzel.Dtpl data)
+               {
+
+                   Console.WriteLine(data.msg);
+               };
+
+               //subscribes and fetches the message from the queue
+               e.subscribe(&quot;myqueue1&quot;, func);
+
+               //don't let the main program exit,
+               //so that the callback is called for new messages
+               while (true)
+               {
+                   System.Threading.Thread.Sleep(100000);
+               }
+
+           }
+           catch (Exception ex)
+           {
+               Console.Write(ex.Message);
+           }
+           finally
+           {
+               e = null;
+           }
+       }
+   }
+
+</code></pre>
+
+<h3 id="functions:9758dc2ecfa9a309cef2dafc8e331f77">Functions:</h3>
+
+<h4 id="1-publish-queuename-message-options:9758dc2ecfa9a309cef2dafc8e331f77">1. publish(queuename,message,options)</h4>
+
+<p>This pushes a message to etzel server.The arguments required are queuename (which is the name of the queue you want to pubish to), message (which is the message you want to publish to the queue),options includes delay and expire functionality . The options argument  can be used when the message insert needs to be delayed or messaged validity needs to be expired. Options isn&rsquo;t an obligatory argument. The delay and expiry is taken in seconds.</p>
+
+<h4 id="2-subscribe-queuename-callback:9758dc2ecfa9a309cef2dafc8e331f77">2. subscribe(queuename,callback)</h4>
+
+<p>The subscribe function is fetches a message from the etzel server. The argument required are queueName which is the name of the Queue you want to fetch the data from, callback is a custom fucntion which you have to provide.</p>
+
+<p>Example:-</p>
+
+<pre><code>
+    ec.subscribe(&quot;test&quot;,cb);
+
+</code></pre>
+
+<p>Here test is the queuename.
+An entity fetching data from the specific queue is called a worker. You can multiple workers working on the same queue. The server facilitates load balancing amongst the workers. Fetching a message will delete the message from the queue <strong>temporarily</strong>(re-queued after 60 seconds).</p>
+
+<pre><code>e.acknowledge(queuename,uid)
+</code></pre>
+
+<p>To delete it permanently , we use the acknowledge function which deletes/acknowledges a specific message from the queue. The arguments required are queuename and the id of the message you want to acknowledge.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="http://etzelserver.com/docs/drivers/php/">
         PHP Driver
       </a>
