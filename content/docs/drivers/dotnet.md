@@ -13,7 +13,7 @@ PM> Install-Package EtzelClient
 
 #### Publish Example
 
-````
+````csharp
 class Publish
    {
        static void Main(string[] args)
@@ -42,7 +42,7 @@ class Publish
 
 #### Subscribe Example
 
-````
+````csharp
 class Subscribe
    {
        static void Main(string[] args)

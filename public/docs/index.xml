@@ -24,7 +24,7 @@
 
 &lt;h4 id=&#34;publish-example:9758dc2ecfa9a309cef2dafc8e331f77&#34;&gt;Publish Example&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;class Publish
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;class Publish
    {
        static void Main(string[] args)
        {
@@ -52,7 +52,7 @@
 
 &lt;h4 id=&#34;subscribe-example:9758dc2ecfa9a309cef2dafc8e331f77&#34;&gt;Subscribe Example&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;class Subscribe
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;class Subscribe
    {
        static void Main(string[] args)
        {

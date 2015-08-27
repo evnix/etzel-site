@@ -24,7 +24,7 @@
 
 &lt;h4 id=&#34;publish-example:9758dc2ecfa9a309cef2dafc8e331f77&#34;&gt;Publish Example&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;class Publish
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;class Publish
    {
        static void Main(string[] args)
        {
@@ -52,7 +52,7 @@
 
 &lt;h4 id=&#34;subscribe-example:9758dc2ecfa9a309cef2dafc8e331f77&#34;&gt;Subscribe Example&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;class Subscribe
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;class Subscribe
    {
        static void Main(string[] args)
        {
@@ -615,7 +615,8 @@ Default is 0(365 days).&lt;/p&gt;&lt;/li&gt;
 
 &lt;p&gt;A Fast &amp;amp; Reliable open source Job delegation &amp;amp; queueing server.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://etzelserver.com/images/etzel.png&#34; alt=&#34;Etzel Server&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://etzelserver.com/images/etzel.png&#34; alt=&#34;Etzel Server&#34; /&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Etzel is built for Robust messaging between applications. It has built-in support for load-balancing and fault tolerance.&lt;/p&gt;
 
