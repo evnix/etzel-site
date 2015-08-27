@@ -58,6 +58,10 @@ class Subscribe
                {
 
                    Console.WriteLine(data.msg);
+                   
+                   //acknowledge/delete Item permanently after processing
+                   e.acknowledge(data.qname,data.uid);
+                   
                };
 
                //subscribes and fetches the message from the queue
