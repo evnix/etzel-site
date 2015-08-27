@@ -88,10 +88,12 @@
            Etzel.EtzelClient e = null;
            try
            {
-               e = new Etzel.EtzelClient(&quot;ws://192.168.0.91:8080/connect&quot;);
                //specify the host
-               e.publish(&quot;myqueue1&quot;, &quot;mymessage&quot;);
+               e = new Etzel.EtzelClient(&quot;ws://192.168.0.91:8080/connect&quot;);
+               
                //publish a message to the queue
+               e.publish(&quot;myqueue1&quot;, &quot;mymessage&quot;);
+               
            }
            catch (Exception ex)
            {
