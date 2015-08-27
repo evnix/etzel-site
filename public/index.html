@@ -11,9 +11,9 @@
   <title> Etzel Server &middot; Etzel Server </title>
 
   
-  <link rel="stylesheet" href="http://etzelserver.com/css/poole.css">
-  <link rel="stylesheet" href="http://etzelserver.com/css/syntax.css">
-  <link rel="stylesheet" href="http://etzelserver.com/css/hyde.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/hyde.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   
@@ -21,7 +21,7 @@
   <link rel="shortcut icon" href="/favicon.png">
 
   
-  <link href="http://etzelserver.com/index.xml" rel="alternate" type="application/rss+xml" title="Etzel Server" />
+  <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="Etzel Server" />
 
 
 <link rel="stylesheet" href="/prism/themes/prism.css">
@@ -35,7 +35,7 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="http://etzelserver.com/"><h1>Etzel Server</h1></a>
+      <a href="http://localhost:1313/"><h1>Etzel Server</h1></a>
       <p class="lead">
       A Fast & Reliable open source Job delegation & queueing server written in Erlang/OTP. Follow us on <a href="http://twitter.com/etzelserver">@EtzelServer</a>.
       </p>
@@ -65,7 +65,7 @@
       
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/docs/drivers/dotnet/">
+      <a href="http://localhost:1313/docs/drivers/dotnet/">
         C# / .NET Driver
       </a>
     </h1>
@@ -179,7 +179,7 @@ An entity fetching data from the specific queue is called a worker. You can mult
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/docs/drivers/php/">
+      <a href="http://localhost:1313/docs/drivers/php/">
         PHP Driver
       </a>
     </h1>
@@ -198,7 +198,7 @@ An entity fetching data from the specific queue is called a worker. You can mult
 
 <p>Example:-</p>
 
-<pre><code>&lt;?php
+<pre><code class="language-php">&lt;?php
 
 $etzel = new EtzelClient(&quot;ws://127.0.0.1:8080/connect&quot;);
 
@@ -250,7 +250,7 @@ An entity fetching data from the specific queue is called a worker. You can mult
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/downloads/">
+      <a href="http://localhost:1313/downloads/">
         Downloads
       </a>
     </h1>
@@ -269,7 +269,7 @@ An entity fetching data from the specific queue is called a worker. You can mult
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/docs/drivers/js/">
+      <a href="http://localhost:1313/docs/drivers/js/">
         Javascript Driver
       </a>
     </h1>
@@ -296,10 +296,12 @@ An entity fetching data from the specific queue is called a worker. You can mult
 
 <p>Example:-</p>
 
-<pre><code>etzelclient=require(&quot;etzelclient&quot;);
+<pre><code class="language-javascript">etzelclient=require(&quot;etzelclient&quot;);
 
 ec=new etzelclient(&quot;ws://localhost:8080/connect&quot;);
+
 ec.onopen=function(){
+
     ec.publish('test','hi');
 
 }
@@ -309,7 +311,7 @@ ec.onopen=function(){
 
 <p>additional options for publish:</p>
 
-<pre><code>    ec.publish('test','hi',{delay:5,expires:3600,priority:0});
+<pre><code class="language-javascript">    ec.publish('test','hi',{delay:5,expires:3600,priority:0});
 </code></pre>
 
 <ul>
@@ -328,7 +330,7 @@ Default is 0(365 days).</p></li>
 
 <p>Example:-</p>
 
-<pre><code>etzelclient=require(&quot;etzelclient&quot;);
+<pre><code class="language-javascript">etzelclient=require(&quot;etzelclient&quot;);
 
 ec=new etzelclient(&quot;ws://localhost:8080/connect&quot;);
 
@@ -356,7 +358,7 @@ An entity fetching data from the specific queue is called a worker. You can mult
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/docs/lang-drivers/">
+      <a href="http://localhost:1313/docs/lang-drivers/">
         Language drivers
       </a>
     </h1>
@@ -387,7 +389,7 @@ An entity fetching data from the specific queue is called a worker. You can mult
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/docs/internal/data-format/">
+      <a href="http://localhost:1313/docs/internal/data-format/">
         Data format
       </a>
     </h1>
@@ -431,7 +433,7 @@ Item: Variable lenght text
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/docs/internal/server-algorithm/">
+      <a href="http://localhost:1313/docs/internal/server-algorithm/">
         Server algorithm
       </a>
     </h1>
@@ -487,7 +489,7 @@ Item: Variable lenght text
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/docs/internal/worker-algorithm/">
+      <a href="http://localhost:1313/docs/internal/worker-algorithm/">
         Worker algorithm
       </a>
     </h1>
@@ -516,7 +518,7 @@ Item: Variable lenght text
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/docs/internal/req-resp-format/">
+      <a href="http://localhost:1313/docs/internal/req-resp-format/">
         request response format
       </a>
     </h1>
@@ -627,7 +629,7 @@ Default is 0(365 days).</p></li>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/documentation/">
+      <a href="http://localhost:1313/documentation/">
         Documentation
       </a>
     </h1>
@@ -655,7 +657,7 @@ Default is 0(365 days).</p></li>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/getstarted/">
+      <a href="http://localhost:1313/getstarted/">
         Getting started
       </a>
     </h1>
@@ -694,7 +696,7 @@ Default is 0(365 days).</p></li>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/home/">
+      <a href="http://localhost:1313/home/">
         Etzel Server
       </a>
     </h1>
@@ -770,7 +772,7 @@ you could have hundreds of workers connected to Etzel to do the processing and E
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/">
+      <a href="http://localhost:1313/">
         index
       </a>
     </h1>
@@ -783,7 +785,7 @@ you could have hundreds of workers connected to Etzel to do the processing and E
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/about/">
+      <a href="http://localhost:1313/about/">
         About
       </a>
     </h1>
@@ -814,7 +816,7 @@ This makes Etzel as easy to connect as a HTTP service and yet have speeds simila
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/front/">
+      <a href="http://localhost:1313/front/">
         front
       </a>
     </h1>

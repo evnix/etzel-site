@@ -16,7 +16,8 @@ composer require bat_coder/etzelclient:dev-master
 This pushes a message to etzel server.The arguments required are queuename (which is the name of the queue you want to pubish to), message (which is the message you want to publish to the queue),options includes delay and expire functionality . The options argument  can be used when the message insert needs to be delayed or messaged validity needs to be expired. Options isn't an obligatory argument. The delay and expiry is taken in seconds.
 
 Example:-
-````
+
+````php
 <?php
 
 $etzel = new EtzelClient("ws://127.0.0.1:8080/connect");
@@ -27,7 +28,7 @@ foreach($emails as $email){
     
     $etzel->publish("group1", $email);
 }
-?>
+
 ````
 
 test is the queuename,hi is the message and the delay is 0 seconds

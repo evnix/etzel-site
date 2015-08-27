@@ -1,6 +1,6 @@
 +++
 date = "2015-08-22T23:39:49+05:30"
-draft = true
+draft = false
 title = "Javascript Driver"
 
 +++
@@ -24,11 +24,13 @@ require('etzelclient');
 This pushes a message to etzel server.The arguments required are queuename (which is the name of the queue you want to pubish to), message (which is the message you want to publish to the queue),options includes delay and expire functionality . The options argument  can be used when the message insert needs to be delayed or messaged validity needs to be expired. Options isn't an obligatory argument. The delay and expiry is taken in seconds.
 
 Example:-
-````
+````javascript
 etzelclient=require("etzelclient");
 
 ec=new etzelclient("ws://localhost:8080/connect");
+
 ec.onopen=function(){
+
     ec.publish('test','hi');
 
 }
@@ -38,7 +40,7 @@ test is the queuename,hi is the message and the delay is 0 seconds
 
 additional options for publish:
 
-````
+````javascript
     ec.publish('test','hi',{delay:5,expires:3600,priority:0});
 ````
 
@@ -58,7 +60,7 @@ The subscribe function is fetches a message from the etzel server. The argument 
 
 Example:-
 
-````
+````javascript
 etzelclient=require("etzelclient");
 
 ec=new etzelclient("ws://localhost:8080/connect");

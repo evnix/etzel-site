@@ -11,9 +11,9 @@
   <title> Javascript Driver &middot; Etzel Server </title>
 
   
-  <link rel="stylesheet" href="http://etzelserver.com/css/poole.css">
-  <link rel="stylesheet" href="http://etzelserver.com/css/syntax.css">
-  <link rel="stylesheet" href="http://etzelserver.com/css/hyde.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/hyde.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   
@@ -34,7 +34,7 @@
 		<div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="http://etzelserver.com/"><h1>Etzel Server</h1></a>
+      <a href="http://localhost:1313/"><h1>Etzel Server</h1></a>
       <p class="lead">
       A Fast & Reliable open source Job delegation & queueing server written in Erlang/OTP. Follow us on <a href="http://twitter.com/etzelserver">@EtzelServer</a>.
       </p>
@@ -82,10 +82,12 @@
 
 <p>Example:-</p>
 
-<pre><code>etzelclient=require(&quot;etzelclient&quot;);
+<pre><code class="language-javascript">etzelclient=require(&quot;etzelclient&quot;);
 
 ec=new etzelclient(&quot;ws://localhost:8080/connect&quot;);
+
 ec.onopen=function(){
+
     ec.publish('test','hi');
 
 }
@@ -95,7 +97,7 @@ ec.onopen=function(){
 
 <p>additional options for publish:</p>
 
-<pre><code>    ec.publish('test','hi',{delay:5,expires:3600,priority:0});
+<pre><code class="language-javascript">    ec.publish('test','hi',{delay:5,expires:3600,priority:0});
 </code></pre>
 
 <ul>
@@ -114,7 +116,7 @@ Default is 0(365 days).</p></li>
 
 <p>Example:-</p>
 
-<pre><code>etzelclient=require(&quot;etzelclient&quot;);
+<pre><code class="language-javascript">etzelclient=require(&quot;etzelclient&quot;);
 
 ec=new etzelclient(&quot;ws://localhost:8080/connect&quot;);
 
