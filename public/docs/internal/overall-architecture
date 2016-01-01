@@ -1,0 +1,56 @@
++++
+date = "2015-11-15T23:02:31+05:30"
+draft = true
+title = "Overall Architecture"
+
++++
+
+
+`Users` <-> `Projects` -> Queues->Individual priorities with meta and data files
+
+1. at the highest level, we have `users`
+2. Each user can have any number of `projects`
+3. Each project can have any number of Queues.
+4. Each Queue can have a set number of priorities.
+
+Here is a folder structure:(assume /var/etzel/data is our root data dir. )
+
+so, projects will look like:
+    
+    /var/etzel/data/
+    /project_1
+    /project_2
+    /project_3
+     ............../Q1-P.ETM (etzel meta file) P stands for priority(A number between 1 and 40) lower number equals higher priority
+                   /Q1-P-O.ET (etzel data file) O stands for Order. for example, the first 1000 elements can be in Order 1 file, the next 1000 in Order 2(O can be any positive integer) the number goes on increasing
+
+a DB will be used to map users to their respective projects:
+    
+    uid   |    project_id
+    -------------------------
+     1    |    project_1  
+     2    |    project_2  
+     
+the dashboard will list the projects of a user by using the DB
+the dashboard will list the ETM files, which are nothing but Queues.
+the dashboard will read the ETM files and do some calculations to find the number of elements in a queue.(ETM has the necesarry info to calculate the same)
+
+ lets classify th routes into three.
+    1. Dashboard Access (to display the UI)
+    2. Dashboard based actions (ADD DELETE Project)
+    3. API commands for Queue based operations (this nothing but a HTTP wrapper(for ease of use) over the exisitng websocket protocol and we will develop this only once the Queuing system is complete..this is the last thing we will do) example:  /etzelq?command=push&message={"JSon":"Object"}
+
+
+1. Bootsrap 4 with SASS 
+2. riot/react/angular/whatever u like (Note: we need a reproducable licence and preferable something with minimal size)
+
+1. login
+2. register
+3. list projects
+-add
+-delete
+-edit
+-etc will be included in the same page]
+4. list queues[add/delete/etc will be included in the same page]
+5. overview(dashboard with pretty graphs) yup very imp.(charts.js)
+6. change password/account details

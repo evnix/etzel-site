@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title> front &middot; Etzel Server </title>
+  <title> Skip List based Delay Queue &middot; Etzel Server </title>
 
   
   <link rel="stylesheet" href="http://etzelserver.com/css/poole.css">
@@ -60,9 +60,32 @@
 
 		<div class="content container">
 			<div class="post">
-			 	<h1>front</h1>
-			  <span style="display:none" class="post-date">Mon, Jan 1, 0001</span>
-			      
+			 	<h1>Skip List based Delay Queue</h1>
+			  <span style="display:none" class="post-date">Fri, Jan 1, 2016</span>
+			      <p>[date:64bit:Int]</p>
+
+<ul>
+<li><p>Delay Queue will have a separate meta file.</p></li>
+
+<li><p>Delay Queue will be fragmented date wise</p>
+
+<pre><code>    for ex:
+        2016-10-25.Qname.dly
+        2016-10-26.Qname.dly
+</code></pre></li>
+
+<li><p>There will be a Reader process that will pop elements from the Delay Queue</p></li>
+
+<li><p>If the last element is NULL and the Current date is greater than the one stored in the Metafile</p>
+
+<ul>
+<li>Update the date in the Meta file,</li>
+<li>create the new date fragment if not exists,</li>
+<li>Move the Reader Process to the new fragment/file,</li>
+<li>Delete the old fragment.</li>
+</ul></li>
+</ul>
+
 			</div>
 
 			

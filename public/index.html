@@ -54,7 +54,7 @@
       
     </ul>
 
-    <p>&copy; 2015. All rights reserved. </p>
+    <p>&copy; 2016. All rights reserved. </p>
   </div>
 </div>
 
@@ -63,6 +63,41 @@
 <div class="posts">
 
       
+  <div class="post">
+    <h1 class="post-title">
+      <a href="http://etzelserver.com/docs/internal/skip-list-delay-queue/">
+        Skip List based Delay Queue
+      </a>
+    </h1>
+
+    <span style="" class="post-date">Fri, Jan 1, 2016</span>
+
+    <p>[date:64bit:Int]</p>
+
+<ul>
+<li><p>Delay Queue will have a separate meta file.</p></li>
+
+<li><p>Delay Queue will be fragmented date wise</p>
+
+<pre><code>    for ex:
+        2016-10-25.Qname.dly
+        2016-10-26.Qname.dly
+</code></pre></li>
+
+<li><p>There will be a Reader process that will pop elements from the Delay Queue</p></li>
+
+<li><p>If the last element is NULL and the Current date is greater than the one stored in the Metafile</p>
+
+<ul>
+<li>Update the date in the Meta file,</li>
+<li>create the new date fragment if not exists,</li>
+<li>Move the Reader Process to the new fragment/file,</li>
+<li>Delete the old fragment.</li>
+</ul></li>
+</ul>
+
+  </div>
+  
   <div class="post">
     <h1 class="post-title">
       <a href="http://etzelserver.com/docs/drivers/dotnet/">
@@ -254,25 +289,6 @@ An entity fetching data from the specific queue is called a worker. You can mult
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/downloads/">
-        Downloads
-      </a>
-    </h1>
-
-    <span style="" class="post-date">Sun, Aug 23, 2015</span>
-
-    <ul>
-<li><p><a href="https://github.com/evnix/etzel/releases/download/v.0.2.0/etzel_release-Linux-64bit-v0.2.zip">Linux x64 Binary</a></p></li>
-
-<li><p><a href="https://github.com/evnix/etzel/releases/download/v.0.2.0/etzel_release.Mac_x64.v.0.2.zip">Mac x64 Binary</a></p></li>
-
-<li><p><a href="https://github.com/evnix/etzel/">Fork us on Github</a></p></li>
-</ul>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
       <a href="http://etzelserver.com/docs/drivers/js/">
         Javascript Driver
       </a>
@@ -362,37 +378,6 @@ An entity fetching data from the specific queue is called a worker. You can mult
   
   <div class="post">
     <h1 class="post-title">
-      <a href="http://etzelserver.com/docs/lang-drivers/">
-        Language drivers
-      </a>
-    </h1>
-
-    <span style="" class="post-date">Sat, Aug 22, 2015</span>
-
-    
-
-<h3 id="nodejs-javascript:e5338c31ed7ced8d1fd833de1552978c">Nodejs/Javascript</h3>
-
-<ul>
-<li><a href="/docs/drivers/js">EtzelClient on NPM</a></li>
-</ul>
-
-<h3 id="php:e5338c31ed7ced8d1fd833de1552978c">PHP</h3>
-
-<ul>
-<li><a href="/docs/drivers/php">EtzelClient on Composer</a></li>
-</ul>
-
-<h3 id="c-net:e5338c31ed7ced8d1fd833de1552978c">C# / .NET</h3>
-
-<ul>
-<li><a href="/docs/drivers/dotnet">EtzelClient on NuGet</a></li>
-</ul>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
       <a href="http://etzelserver.com/docs/internal/data-format/">
         Data format
       </a>
@@ -431,202 +416,6 @@ delay: 64 bits
 expires: 64 bits
 Item: Variable lenght text
 
-</code></pre>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="http://etzelserver.com/docs/internal/server-algorithm/">
-        Server algorithm
-      </a>
-    </h1>
-
-    <span style="" class="post-date">Sat, Aug 22, 2015</span>
-
-    
-
-<h5 id="on-subscribe:7abec6c6330e8dbe3e8f868b38416272">ON_SUBSCRIBE:</h5>
-
-<pre><code>   - Spawn a process for client &amp; attach its PID to the group.
-   - Example: join_group(Qname,PID) 
-</code></pre>
-
-<h5 id="on-publish:7abec6c6330e8dbe3e8f868b38416272">ON_PUBLISH:</h5>
-
-<pre><code>   - IF NO DELAY -&gt; CALL PUBLISH();
-   - Else: 
-     - CALL PUBLISH(); with delay
-     - write this info(key:value) to disk
-</code></pre>
-
-<pre><code>PUBLISH()
-   - Broadcast Awake Signal to all processes in the sleep list.
-   - &amp; Remove those processes from the sleep list.
-   - Spawn a process for the Queue-X if it does not exist
-   - &amp; send the Element to this process.
-   - Now this Queue-X Process will accept the element
-   - &amp; also write(async) the data to disk by generating required key:value  
-</code></pre>
-
-<h5 id="on-fet-request:7abec6c6330e8dbe3e8f868b38416272">ON_FET_REQUEST:</h5>
-
-<pre><code>   1. Pop the top of the Queue 
-   2. if the element has expired 
-        2.1 Delete element from disk
-        2.2 go to step 1
-   3. if the element matches with any element in the delete list: 
-      3.1. remove the element from the delete list.
-      3.2. Go to Step 1
-   3. else Send it to the requested Client 
-   4. increment the 'error_count' of the Element on Disk
-   5. CALL PUBLISH(element); WITH DELAY:60
-</code></pre>
-
-<h5 id="on-ack-del-request:7abec6c6330e8dbe3e8f868b38416272">ON_ACK/DEL_REQUEST:</h5>
-
-<pre><code>  - Delete the element from disk
-  - PUSH the element to the delete list
-</code></pre>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="http://etzelserver.com/docs/internal/worker-algorithm/">
-        Worker algorithm
-      </a>
-    </h1>
-
-    <span style="" class="post-date">Sat, Aug 22, 2015</span>
-
-    
-
-<h4 id="awake-mode:2474f55462f9d4c29cab2ced96e05d14">AWAKE_MODE:</h4>
-
-<pre><code>
-    1. Req for job
-    2. if no job go to SLEEP_MODE
-    3. Process the Job.
-    4. Go to Step 1.
-    
-</code></pre>
-
-<h4 id="sleep-mode:2474f55462f9d4c29cab2ced96e05d14">SLEEP MODE:</h4>
-
-<pre><code>    1. Listen to Socket
-        - If job==AVBL go to AWAKE_MODE
-</code></pre>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="http://etzelserver.com/docs/internal/req-resp-format/">
-        request response format
-      </a>
-    </h1>
-
-    <span style="" class="post-date">Sat, Aug 22, 2015</span>
-
-    
-
-<p>All messages are sent and received in JSON format.</p>
-
-<h3 id="subscribe-to-queue:1eb3d0ea3fb1616138ff9db983c03a24">Subscribe to queue</h3>
-
-<pre><code>{
-    &quot;cmd&quot;:&quot;SUB&quot;,
-    &quot;qname&quot;: &quot;$Q_NAME&quot;
-}
-</code></pre>
-
-<h3 id="fetch-a-message-from-queue:1eb3d0ea3fb1616138ff9db983c03a24">Fetch a message from Queue</h3>
-
-<pre><code>{
-    &quot;cmd&quot;:&quot;FET&quot;,
-    &quot;qname&quot;: &quot;$Q_NAME&quot;
-}
-</code></pre>
-
-<h3 id="publish:1eb3d0ea3fb1616138ff9db983c03a24">Publish</h3>
-
-<pre><code>{
-    &quot;cmd&quot;:&quot;PUB&quot;,
-    &quot;qname&quot;: &quot;$Q_NAME&quot;,
-    &quot;message&quot;: &quot;$message&quot;,
-    &quot;delay&quot;: 0,
-    &quot;expires&quot;: 0, 
-    &quot;priority&quot;: 0
-
-}
-</code></pre>
-
-<p><strong>Optional messages&rsquo; parameters:</strong></p>
-
-<ul>
-<li><p><code>delay</code>: The item will not be available on the queue until this many seconds have passed.
-Default is 0 seconds. Maximum is 365 days(in seconds).</p></li>
-
-<li><p><code>expires</code>: How long in seconds to keep the item on the queue before it is deleted.
-Default is 0(365 days).</p></li>
-
-<li><p><code>priority</code>: It can be either -20,0,20 (High, Medium, Low).</p></li>
-</ul>
-
-<h3 id="inform-server-that-you-are-going-to-sleep:1eb3d0ea3fb1616138ff9db983c03a24">inform server that you are going to SLEEP</h3>
-
-<pre><code>{
-    &quot;cmd&quot;:&quot;ISLP&quot;,
-    &quot;qname&quot;: &quot;$Q_NAME&quot;
-}
-</code></pre>
-
-<hr />
-
-<h2 id="response-from-server:1eb3d0ea3fb1616138ff9db983c03a24">Response From server:</h2>
-
-<h3 id="no-queue-found:1eb3d0ea3fb1616138ff9db983c03a24">No Queue Found</h3>
-
-<pre><code>{
-    &quot;cmd&quot;:&quot;nok&quot;,
-    &quot;err&quot;: &quot;Q_NOT_FOUND&quot;
-}
-</code></pre>
-
-<h3 id="no-message-available-in-the-requested-queue:1eb3d0ea3fb1616138ff9db983c03a24">No Message Available in the requested Queue</h3>
-
-<pre><code>{
-    &quot;cmd&quot;:&quot;nomsg&quot;,
-    &quot;qname&quot;: &quot;$Q_NAME&quot;
-}
-</code></pre>
-
-<h3 id="it-is-ok-to-go-to-sleep:1eb3d0ea3fb1616138ff9db983c03a24">It is ok to go to sleep</h3>
-
-<pre><code>{
-    &quot;cmd&quot;:&quot;okslp&quot;,
-    &quot;qname&quot;: &quot;$Q_NAME&quot;
-}
-</code></pre>
-
-<h3 id="message-available-in-the-requested-queue:1eb3d0ea3fb1616138ff9db983c03a24">Message Available in the requested Queue</h3>
-
-<pre><code>{
-    &quot;cmd&quot;: &quot;msg&quot;,
-    &quot;qname&quot;: &quot;$Q_NAME&quot;,
-    &quot;uid&quot;: &quot;$uid&quot;,
-    &quot;error_count&quot;: &quot;$count&quot;,
-    &quot;msg&quot;: &quot;$message&quot;
-}
-</code></pre>
-
-<h3 id="wake-up-the-client-for-a-particular-queue:1eb3d0ea3fb1616138ff9db983c03a24">Wake up the client for a particular Queue</h3>
-
-<pre><code>{
-    &quot;cmd&quot;:&quot;awk&quot;,
-    &quot;qname&quot;: &quot;$Q_NAME&quot;
-}
 </code></pre>
 
   </div>
@@ -771,19 +560,6 @@ you could have hundreds of workers connected to Etzel to do the processing and E
 <p><strong>What if all the workers die?</strong></p>
 
 <p>Etzel will keep the messages until a worker is available.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="http://etzelserver.com/">
-        index
-      </a>
-    </h1>
-
-    <span style="" class="post-date">Mon, Aug 17, 2015</span>
-
-    <p>hello frm index</p>
 
   </div>
   
