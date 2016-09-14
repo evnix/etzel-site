@@ -3,7 +3,7 @@
 <head>
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.14" />
+  <meta name="generator" content="Hugo 0.16" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -11,9 +11,9 @@
   <title> request response format &middot; Etzel Server </title>
 
   
-  <link rel="stylesheet" href="http://etzelserver.com/css/poole.css">
-  <link rel="stylesheet" href="http://etzelserver.com/css/syntax.css">
-  <link rel="stylesheet" href="http://etzelserver.com/css/hyde.css">
+  <link rel="stylesheet" href="http://etzelserver.aviscript.ml/css/poole.css">
+  <link rel="stylesheet" href="http://etzelserver.aviscript.ml/css/syntax.css">
+  <link rel="stylesheet" href="http://etzelserver.aviscript.ml/css/hyde.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   
@@ -34,7 +34,7 @@
 		<div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="http://etzelserver.com/"><h1>Etzel Server</h1></a>
+      <a href="http://etzelserver.aviscript.ml/"><h1>Etzel Server</h1></a>
       <p class="lead">
       A Fast & Reliable open source Job delegation & queueing server written in Erlang/OTP. Follow us on <a href="http://twitter.com/etzelserver">@EtzelServer</a>.
       </p>
@@ -53,7 +53,7 @@
       
     </ul>
 
-    <p>&copy; 2015. All rights reserved. </p>
+    <p>&copy; 2016. All rights reserved. </p>
   </div>
 </div>
 
@@ -66,7 +66,7 @@
 
 <p>All messages are sent and received in JSON format.</p>
 
-<h3 id="subscribe-to-queue:1eb3d0ea3fb1616138ff9db983c03a24">Subscribe to queue</h3>
+<h3 id="subscribe-to-queue">Subscribe to queue</h3>
 
 <pre><code>{
     &quot;cmd&quot;:&quot;SUB&quot;,
@@ -74,7 +74,7 @@
 }
 </code></pre>
 
-<h3 id="fetch-a-message-from-queue:1eb3d0ea3fb1616138ff9db983c03a24">Fetch a message from Queue</h3>
+<h3 id="fetch-a-message-from-queue">Fetch a message from Queue</h3>
 
 <pre><code>{
     &quot;cmd&quot;:&quot;FET&quot;,
@@ -82,7 +82,7 @@
 }
 </code></pre>
 
-<h3 id="publish:1eb3d0ea3fb1616138ff9db983c03a24">Publish</h3>
+<h3 id="publish">Publish</h3>
 
 <pre><code>{
     &quot;cmd&quot;:&quot;PUB&quot;,
@@ -107,7 +107,7 @@ Default is 0(365 days).</p></li>
 <li><p><code>priority</code>: It can be either -20,0,20 (High, Medium, Low).</p></li>
 </ul>
 
-<h3 id="inform-server-that-you-are-going-to-sleep:1eb3d0ea3fb1616138ff9db983c03a24">inform server that you are going to SLEEP</h3>
+<h3 id="inform-server-that-you-are-going-to-sleep">inform server that you are going to SLEEP</h3>
 
 <pre><code>{
     &quot;cmd&quot;:&quot;ISLP&quot;,
@@ -117,9 +117,9 @@ Default is 0(365 days).</p></li>
 
 <hr />
 
-<h2 id="response-from-server:1eb3d0ea3fb1616138ff9db983c03a24">Response From server:</h2>
+<h2 id="response-from-server">Response From server:</h2>
 
-<h3 id="no-queue-found:1eb3d0ea3fb1616138ff9db983c03a24">No Queue Found</h3>
+<h3 id="no-queue-found">No Queue Found</h3>
 
 <pre><code>{
     &quot;cmd&quot;:&quot;nok&quot;,
@@ -127,7 +127,7 @@ Default is 0(365 days).</p></li>
 }
 </code></pre>
 
-<h3 id="no-message-available-in-the-requested-queue:1eb3d0ea3fb1616138ff9db983c03a24">No Message Available in the requested Queue</h3>
+<h3 id="no-message-available-in-the-requested-queue">No Message Available in the requested Queue</h3>
 
 <pre><code>{
     &quot;cmd&quot;:&quot;nomsg&quot;,
@@ -135,7 +135,7 @@ Default is 0(365 days).</p></li>
 }
 </code></pre>
 
-<h3 id="it-is-ok-to-go-to-sleep:1eb3d0ea3fb1616138ff9db983c03a24">It is ok to go to sleep</h3>
+<h3 id="it-is-ok-to-go-to-sleep">It is ok to go to sleep</h3>
 
 <pre><code>{
     &quot;cmd&quot;:&quot;okslp&quot;,
@@ -143,7 +143,7 @@ Default is 0(365 days).</p></li>
 }
 </code></pre>
 
-<h3 id="message-available-in-the-requested-queue:1eb3d0ea3fb1616138ff9db983c03a24">Message Available in the requested Queue</h3>
+<h3 id="message-available-in-the-requested-queue">Message Available in the requested Queue</h3>
 
 <pre><code>{
     &quot;cmd&quot;: &quot;msg&quot;,
@@ -154,7 +154,7 @@ Default is 0(365 days).</p></li>
 }
 </code></pre>
 
-<h3 id="wake-up-the-client-for-a-particular-queue:1eb3d0ea3fb1616138ff9db983c03a24">Wake up the client for a particular Queue</h3>
+<h3 id="wake-up-the-client-for-a-particular-queue">Wake up the client for a particular Queue</h3>
 
 <pre><code>{
     &quot;cmd&quot;:&quot;awk&quot;,
