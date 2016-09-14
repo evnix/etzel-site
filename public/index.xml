@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Etzel Server</title>
-    <link>http://etzelserver.com/</link>
+    <link>http://163.172.174.245/etzel-site/public/</link>
     <description>Recent content on Etzel Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Jan 2016 12:22:13 +0530</lastBuildDate>
-    <atom:link href="http://etzelserver.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://163.172.174.245/etzel-site/public/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Skip List based Delay Queue</title>
-      <link>http://etzelserver.com/docs/internal/skip-list-delay-queue/</link>
+      <link>http://163.172.174.245/etzel-site/public/docs/internal/skip-list-delay-queue/</link>
       <pubDate>Fri, 01 Jan 2016 12:22:13 +0530</pubDate>
       
-      <guid>http://etzelserver.com/docs/internal/skip-list-delay-queue/</guid>
+      <guid>http://163.172.174.245/etzel-site/public/docs/internal/skip-list-delay-queue/</guid>
       <description>&lt;p&gt;[date:64bit:Int]&lt;/p&gt;
 
 &lt;ul&gt;
@@ -43,10 +43,10 @@
     
     <item>
       <title>C# / .NET Driver</title>
-      <link>http://etzelserver.com/docs/drivers/dotnet/</link>
+      <link>http://163.172.174.245/etzel-site/public/docs/drivers/dotnet/</link>
       <pubDate>Thu, 27 Aug 2015 13:11:05 +0530</pubDate>
       
-      <guid>http://etzelserver.com/docs/drivers/dotnet/</guid>
+      <guid>http://163.172.174.245/etzel-site/public/docs/drivers/dotnet/</guid>
       <description>
 
 &lt;p&gt;using NuGet Console in Visual Studio&lt;/p&gt;
@@ -54,7 +54,7 @@
 &lt;pre&gt;&lt;code&gt;PM&amp;gt; Install-Package EtzelClient
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;publish-example:9758dc2ecfa9a309cef2dafc8e331f77&#34;&gt;Publish Example&lt;/h4&gt;
+&lt;h4 id=&#34;publish-example&#34;&gt;Publish Example&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;class Publish
    {
@@ -82,7 +82,7 @@
    }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;subscribe-example:9758dc2ecfa9a309cef2dafc8e331f77&#34;&gt;Subscribe Example&lt;/h4&gt;
+&lt;h4 id=&#34;subscribe-example&#34;&gt;Subscribe Example&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;class Subscribe
    {
@@ -129,13 +129,13 @@
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;functions:9758dc2ecfa9a309cef2dafc8e331f77&#34;&gt;Functions:&lt;/h3&gt;
+&lt;h3 id=&#34;functions&#34;&gt;Functions:&lt;/h3&gt;
 
-&lt;h4 id=&#34;1-publish-queuename-message-options:9758dc2ecfa9a309cef2dafc8e331f77&#34;&gt;1. publish(queuename,message,options)&lt;/h4&gt;
+&lt;h4 id=&#34;1-publish-queuename-message-options&#34;&gt;1. publish(queuename,message,options)&lt;/h4&gt;
 
 &lt;p&gt;This pushes a message to etzel server.The arguments required are queuename (which is the name of the queue you want to pubish to), message (which is the message you want to publish to the queue),options includes delay and expire functionality . The options argument  can be used when the message insert needs to be delayed or messaged validity needs to be expired. Options isn&amp;rsquo;t an obligatory argument. The delay and expiry is taken in seconds.&lt;/p&gt;
 
-&lt;h4 id=&#34;2-subscribe-queuename-callback:9758dc2ecfa9a309cef2dafc8e331f77&#34;&gt;2. subscribe(queuename,callback)&lt;/h4&gt;
+&lt;h4 id=&#34;2-subscribe-queuename-callback&#34;&gt;2. subscribe(queuename,callback)&lt;/h4&gt;
 
 &lt;p&gt;The subscribe function is fetches a message from the etzel server. The argument required are queueName which is the name of the Queue you want to fetch the data from, callback is a custom fucntion which you have to provide.&lt;/p&gt;
 
@@ -158,17 +158,17 @@ An entity fetching data from the specific queue is called a worker. You can mult
     
     <item>
       <title>PHP Driver</title>
-      <link>http://etzelserver.com/docs/drivers/php/</link>
+      <link>http://163.172.174.245/etzel-site/public/docs/drivers/php/</link>
       <pubDate>Sun, 23 Aug 2015 11:33:19 +0530</pubDate>
       
-      <guid>http://etzelserver.com/docs/drivers/php/</guid>
+      <guid>http://163.172.174.245/etzel-site/public/docs/drivers/php/</guid>
       <description>
 
 &lt;pre&gt;&lt;code&gt;composer require bat_coder/etzelclient:dev-master
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;1-publish-queuename-message-options:14fa85f82f7cd05b22a291e5527c5ae7&#34;&gt;1. publish(queuename,message,options)&lt;/h4&gt;
+&lt;h4 id=&#34;1-publish-queuename-message-options&#34;&gt;1. publish(queuename,message,options)&lt;/h4&gt;
 
 &lt;p&gt;This pushes a message to etzel server.The arguments required are queuename (which is the name of the queue you want to pubish to), message (which is the message you want to publish to the queue),options includes delay and expire functionality . The options argument  can be used when the message insert needs to be delayed or messaged validity needs to be expired. Options isn&amp;rsquo;t an obligatory argument. The delay and expiry is taken in seconds.&lt;/p&gt;
 
@@ -204,7 +204,7 @@ Default is 0(365 days).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;priority&lt;/code&gt;: It can be either -20,0,20 (High, Medium, Low).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;2-subscribe-queuename-callback:14fa85f82f7cd05b22a291e5527c5ae7&#34;&gt;2. subscribe(queuename,callback)&lt;/h4&gt;
+&lt;h4 id=&#34;2-subscribe-queuename-callback&#34;&gt;2. subscribe(queuename,callback)&lt;/h4&gt;
 
 &lt;p&gt;The subscribe function is fetches a message from the etzel server. The argument required are queuename which is the name of the you want to fetch the data from, callback is a custom fucntion which you have you provide.&lt;/p&gt;
 
@@ -226,10 +226,10 @@ An entity fetching data from the specific queue is called a worker. You can mult
     
     <item>
       <title>Javascript Driver</title>
-      <link>http://etzelserver.com/docs/drivers/js/</link>
+      <link>http://163.172.174.245/etzel-site/public/docs/drivers/js/</link>
       <pubDate>Sat, 22 Aug 2015 23:39:49 +0530</pubDate>
       
-      <guid>http://etzelserver.com/docs/drivers/js/</guid>
+      <guid>http://163.172.174.245/etzel-site/public/docs/drivers/js/</guid>
       <description>
 
 &lt;p&gt;You can install the node client by opening a command prompt and using the following command&lt;/p&gt;
@@ -244,7 +244,7 @@ An entity fetching data from the specific queue is called a worker. You can mult
 &lt;pre&gt;&lt;code&gt;require(&#39;etzelclient&#39;);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;1-publish-queuename-message-options:615e3f22fa9cd8f45adc27486278fdbb&#34;&gt;1. publish(queuename,message,options)&lt;/h4&gt;
+&lt;h4 id=&#34;1-publish-queuename-message-options&#34;&gt;1. publish(queuename,message,options)&lt;/h4&gt;
 
 &lt;p&gt;This pushes a message to etzel server.The arguments required are queuename (which is the name of the queue you want to pubish to), message (which is the message you want to publish to the queue),options includes delay and expire functionality . The options argument  can be used when the message insert needs to be delayed or messaged validity needs to be expired. Options isn&amp;rsquo;t an obligatory argument. The delay and expiry is taken in seconds.&lt;/p&gt;
 
@@ -278,7 +278,7 @@ Default is 0(365 days).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;priority&lt;/code&gt;: It can be either -20,0,20 (High, Medium, Low).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;2-subscribe-queuename-callback:615e3f22fa9cd8f45adc27486278fdbb&#34;&gt;2. subscribe(queuename,callback)&lt;/h4&gt;
+&lt;h4 id=&#34;2-subscribe-queuename-callback&#34;&gt;2. subscribe(queuename,callback)&lt;/h4&gt;
 
 &lt;p&gt;The subscribe function is fetches a message from the etzel server. The argument required are queuename which is the name of the you want to fetch the data from, callback is a custom fucntion which you have you provide.&lt;/p&gt;
 
@@ -312,13 +312,13 @@ An entity fetching data from the specific queue is called a worker. You can mult
     
     <item>
       <title>Data format</title>
-      <link>http://etzelserver.com/docs/internal/data-format/</link>
+      <link>http://163.172.174.245/etzel-site/public/docs/internal/data-format/</link>
       <pubDate>Sat, 22 Aug 2015 23:02:31 +0530</pubDate>
       
-      <guid>http://etzelserver.com/docs/internal/data-format/</guid>
+      <guid>http://163.172.174.245/etzel-site/public/docs/internal/data-format/</guid>
       <description>
 
-&lt;h3 id=&#34;queue-element-format-in-memory:80929b78b7ce01a4c5852f6c3b86083d&#34;&gt;Queue Element format in Memory&lt;/h3&gt;
+&lt;h3 id=&#34;queue-element-format-in-memory&#34;&gt;Queue Element format in Memory&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;error_count|expires|UidSize|uid|Item
 
@@ -326,7 +326,7 @@ Size of each block in bits:
 &amp;lt;&amp;lt;error_count:8&amp;gt;&amp;gt;,&amp;lt;&amp;lt;Expires:64&amp;gt;&amp;gt;,&amp;lt;&amp;lt;Uid_size:16&amp;gt;&amp;gt;,Uid,Msg
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;queue-element-format-on-disk:80929b78b7ce01a4c5852f6c3b86083d&#34;&gt;Queue element format on disk&lt;/h3&gt;
+&lt;h3 id=&#34;queue-element-format-on-disk&#34;&gt;Queue element format on disk&lt;/h3&gt;
 
 &lt;p&gt;The queue elements are stored in a key value store in the following format.&lt;/p&gt;
 
@@ -353,36 +353,36 @@ Item: Variable lenght text
     
     <item>
       <title>Documentation</title>
-      <link>http://etzelserver.com/documentation/</link>
+      <link>http://163.172.174.245/etzel-site/public/documentation/</link>
       <pubDate>Sat, 22 Aug 2015 21:24:53 +0530</pubDate>
       
-      <guid>http://etzelserver.com/documentation/</guid>
+      <guid>http://163.172.174.245/etzel-site/public/documentation/</guid>
       <description>
 
-&lt;h3 id=&#34;general:519b3731c0b3c26bafa462d3efdcc120&#34;&gt;General&lt;/h3&gt;
+&lt;h3 id=&#34;general&#34;&gt;General&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://etzelserver.com/getstarted/&#34;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://163.172.174.245/etzel-site/public/getstarted/&#34;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;etzel-internals:519b3731c0b3c26bafa462d3efdcc120&#34;&gt;Etzel Internals&lt;/h3&gt;
+&lt;h3 id=&#34;etzel-internals&#34;&gt;Etzel Internals&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://etzelserver.com/docs/internal/req-resp-format/&#34;&gt;Request &amp;amp; Response format&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://etzelserver.com/docs/internal/worker-algorithm/&#34;&gt;Worker Alogrithm/Flow&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://etzelserver.com/docs/internal/server-algorithm/&#34;&gt;Server Algorithm/Flow&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://etzelserver.com/docs/internal/data-format/&#34;&gt;Data format&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://163.172.174.245/etzel-site/public/docs/internal/req-resp-format/&#34;&gt;Request &amp;amp; Response format&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://163.172.174.245/etzel-site/public/docs/internal/worker-algorithm/&#34;&gt;Worker Alogrithm/Flow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://163.172.174.245/etzel-site/public/docs/internal/server-algorithm/&#34;&gt;Server Algorithm/Flow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://163.172.174.245/etzel-site/public/docs/internal/data-format/&#34;&gt;Data format&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
     
     <item>
       <title>Getting started</title>
-      <link>http://etzelserver.com/getstarted/</link>
+      <link>http://163.172.174.245/etzel-site/public/getstarted/</link>
       <pubDate>Tue, 18 Aug 2015 13:00:41 +0530</pubDate>
       
-      <guid>http://etzelserver.com/getstarted/</guid>
-      <description>&lt;p&gt;Download etzel-server-*.zip from the &lt;a href=&#34;http://etzelserver.com/downloads/&#34;&gt;download&lt;/a&gt; section.&lt;/p&gt;
+      <guid>http://163.172.174.245/etzel-site/public/getstarted/</guid>
+      <description>&lt;p&gt;Download etzel-server-*.zip from the &lt;a href=&#34;http://163.172.174.245/etzel-site/public/downloads/&#34;&gt;download&lt;/a&gt; section.&lt;/p&gt;
 
 &lt;p&gt;Inside the archive is a directory named &lt;code&gt;etzel_release&lt;/code&gt;. You should extract this into some appropriate location. The &lt;code&gt;bin&lt;/code&gt; directory will be found in this directory.&lt;/p&gt;
 
@@ -414,16 +414,15 @@ Item: Variable lenght text
     
     <item>
       <title>Etzel Server</title>
-      <link>http://etzelserver.com/home/</link>
+      <link>http://163.172.174.245/etzel-site/public/home/</link>
       <pubDate>Tue, 18 Aug 2015 10:35:58 +0530</pubDate>
       
-      <guid>http://etzelserver.com/home/</guid>
+      <guid>http://163.172.174.245/etzel-site/public/home/</guid>
       <description>
 
 &lt;p&gt;A Fast &amp;amp; Reliable open source Job delegation &amp;amp; queueing server.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://etzelserver.com/images/etzel.png&#34; alt=&#34;Etzel Server&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://163.172.174.245/etzel-site/public/images/etzel.png&#34; alt=&#34;Etzel Server&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Etzel is built for Robust messaging between applications. It has built-in support for load-balancing and fault tolerance.&lt;/p&gt;
 
@@ -433,7 +432,7 @@ Item: Variable lenght text
 &lt;li&gt;Decouple your program into components written in languages best suited for the task&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;example:b9bcf8cb73ce4a081a635ad7c0acd9dd&#34;&gt;Example:&lt;/h3&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example:&lt;/h3&gt;
 
 &lt;p&gt;Let us define some workload i.e. to send emails using PHP(client)&lt;/p&gt;
 
@@ -487,10 +486,10 @@ you could have hundreds of workers connected to Etzel to do the processing and E
     
     <item>
       <title>About</title>
-      <link>http://etzelserver.com/about/</link>
+      <link>http://163.172.174.245/etzel-site/public/about/</link>
       <pubDate>Mon, 17 Aug 2015 22:07:32 +0530</pubDate>
       
-      <guid>http://etzelserver.com/about/</guid>
+      <guid>http://163.172.174.245/etzel-site/public/about/</guid>
       <description>
 
 &lt;p&gt;Etzel is a Job Delegation and queueing server.&lt;/p&gt;
@@ -505,7 +504,7 @@ This makes Etzel as easy to connect as a HTTP service and yet have speeds simila
 
 &lt;p&gt;Etzel uses a lot of libraries without which this project wouldn&amp;rsquo;t be possible.&lt;/p&gt;
 
-&lt;h3 id=&#34;lead-developers:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Lead Developers&lt;/h3&gt;
+&lt;h3 id=&#34;lead-developers&#34;&gt;Lead Developers&lt;/h3&gt;
 
 &lt;p&gt;Avinash D&amp;rsquo; Silva [&lt;a href=&#34;https://in.linkedin.com/in/avinashdsilva&#34;&gt;Linkedin&lt;/a&gt;]&lt;/p&gt;
 
@@ -515,10 +514,10 @@ This makes Etzel as easy to connect as a HTTP service and yet have speeds simila
     
     <item>
       <title>front</title>
-      <link>http://etzelserver.com/front/</link>
+      <link>http://163.172.174.245/etzel-site/public/front/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://etzelserver.com/front/</guid>
+      <guid>http://163.172.174.245/etzel-site/public/front/</guid>
       <description></description>
     </item>
     

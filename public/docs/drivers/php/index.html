@@ -3,7 +3,7 @@
 <head>
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.14" />
+  <meta name="generator" content="Hugo 0.16" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -11,9 +11,9 @@
   <title> PHP Driver &middot; Etzel Server </title>
 
   
-  <link rel="stylesheet" href="http://etzelserver.com/css/poole.css">
-  <link rel="stylesheet" href="http://etzelserver.com/css/syntax.css">
-  <link rel="stylesheet" href="http://etzelserver.com/css/hyde.css">
+  <link rel="stylesheet" href="http://163.172.174.245/etzel-site/public/css/poole.css">
+  <link rel="stylesheet" href="http://163.172.174.245/etzel-site/public/css/syntax.css">
+  <link rel="stylesheet" href="http://163.172.174.245/etzel-site/public/css/hyde.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   
@@ -34,7 +34,7 @@
 		<div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="http://etzelserver.com/"><h1>Etzel Server</h1></a>
+      <a href="http://163.172.174.245/etzel-site/public/"><h1>Etzel Server</h1></a>
       <p class="lead">
       A Fast & Reliable open source Job delegation & queueing server written in Erlang/OTP. Follow us on <a href="http://twitter.com/etzelserver">@EtzelServer</a>.
       </p>
@@ -43,13 +43,13 @@
     <ul class="sidebar-nav">
       <li><a href="/">Home</a> </li>
       
-        <li><a href="/getstarted/"> Getting started </a></li>
+        <li><a href="/etzel-site/public/getstarted/"> Getting started </a></li>
       
-        <li><a href="/documentation/"> Documentation </a></li>
+        <li><a href="/etzel-site/public/documentation/"> Documentation </a></li>
       
-        <li><a href="/docs/lang-drivers/"> Language Drivers </a></li>
+        <li><a href="/etzel-site/public/docs/lang-drivers/"> Language Drivers </a></li>
       
-        <li><a href="/about/"> About Etzel </a></li>
+        <li><a href="/etzel-site/public/about/"> About Etzel </a></li>
       
     </ul>
 
@@ -68,7 +68,7 @@
 
 </code></pre>
 
-<h4 id="1-publish-queuename-message-options:14fa85f82f7cd05b22a291e5527c5ae7">1. publish(queuename,message,options)</h4>
+<h4 id="1-publish-queuename-message-options">1. publish(queuename,message,options)</h4>
 
 <p>This pushes a message to etzel server.The arguments required are queuename (which is the name of the queue you want to pubish to), message (which is the message you want to publish to the queue),options includes delay and expire functionality . The options argument  can be used when the message insert needs to be delayed or messaged validity needs to be expired. Options isn&rsquo;t an obligatory argument. The delay and expiry is taken in seconds.</p>
 
@@ -104,7 +104,7 @@ Default is 0(365 days).</p></li>
 <li><p><code>priority</code>: It can be either -20,0,20 (High, Medium, Low).</p></li>
 </ul>
 
-<h4 id="2-subscribe-queuename-callback:14fa85f82f7cd05b22a291e5527c5ae7">2. subscribe(queuename,callback)</h4>
+<h4 id="2-subscribe-queuename-callback">2. subscribe(queuename,callback)</h4>
 
 <p>The subscribe function is fetches a message from the etzel server. The argument required are queuename which is the name of the you want to fetch the data from, callback is a custom fucntion which you have you provide.</p>
 

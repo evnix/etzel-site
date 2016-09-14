@@ -2,58 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://etzelserver.com/</loc>
-    <lastmod>2016-01-01T12:22:13+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://etzelserver.com/docs/internal/skip-list-delay-queue/</loc>
+    <loc>http://163.172.174.245/etzel-site/public/</loc>
     <lastmod>2016-01-01T12:22:13+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://etzelserver.com/docs/drivers/dotnet/</loc>
+    <loc>http://163.172.174.245/etzel-site/public/docs/internal/skip-list-delay-queue/</loc>
+    <lastmod>2016-01-01T12:22:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://163.172.174.245/etzel-site/public/docs/drivers/dotnet/</loc>
     <lastmod>2015-08-27T13:11:05+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://etzelserver.com/docs/drivers/php/</loc>
+    <loc>http://163.172.174.245/etzel-site/public/docs/drivers/php/</loc>
     <lastmod>2015-08-23T11:33:19+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://etzelserver.com/docs/drivers/js/</loc>
+    <loc>http://163.172.174.245/etzel-site/public/docs/drivers/js/</loc>
     <lastmod>2015-08-22T23:39:49+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://etzelserver.com/docs/internal/data-format/</loc>
+    <loc>http://163.172.174.245/etzel-site/public/docs/internal/data-format/</loc>
     <lastmod>2015-08-22T23:02:31+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://etzelserver.com/documentation/</loc>
+    <loc>http://163.172.174.245/etzel-site/public/documentation/</loc>
     <lastmod>2015-08-22T21:24:53+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://etzelserver.com/getstarted/</loc>
+    <loc>http://163.172.174.245/etzel-site/public/getstarted/</loc>
     <lastmod>2015-08-18T13:00:41+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://etzelserver.com/home/</loc>
+    <loc>http://163.172.174.245/etzel-site/public/home/</loc>
     <lastmod>2015-08-18T10:35:58+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://etzelserver.com/about/</loc>
+    <loc>http://163.172.174.245/etzel-site/public/about/</loc>
     <lastmod>2015-08-17T22:07:32+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://etzelserver.com/front/</loc>
+    <loc>http://163.172.174.245/etzel-site/public/front/</loc>
   </url>
   
 </urlset>

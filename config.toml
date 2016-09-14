@@ -1,7 +1,7 @@
-baseurl = "http://etzelserver.com/"
+baseurl = "http://163.172.174.245/etzel-site/public/"
 languageCode = "en-us"
 title = "Etzel Server"
-
+theme = "hyde"
 
     
 [[menu.main]]
