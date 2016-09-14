@@ -1,4 +1,4 @@
-baseurl = "http://163.172.174.245/etzel-site/public/"
+baseurl = "http://etzelserver.aviscript.ml/"
 languageCode = "en-us"
 title = "Etzel Server"
 theme = "hyde"

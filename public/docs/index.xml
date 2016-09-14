@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docs on Etzel Server</title>
-    <link>http://163.172.174.245/etzel-site/public/docs/</link>
+    <link>http://etzelserver.aviscript.ml/docs/</link>
     <description>Recent content in Docs on Etzel Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Jan 2016 12:22:13 +0530</lastBuildDate>
-    <atom:link href="http://163.172.174.245/etzel-site/public/docs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://etzelserver.aviscript.ml/docs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Skip List based Delay Queue</title>
-      <link>http://163.172.174.245/etzel-site/public/docs/internal/skip-list-delay-queue/</link>
+      <link>http://etzelserver.aviscript.ml/docs/internal/skip-list-delay-queue/</link>
       <pubDate>Fri, 01 Jan 2016 12:22:13 +0530</pubDate>
       
-      <guid>http://163.172.174.245/etzel-site/public/docs/internal/skip-list-delay-queue/</guid>
+      <guid>http://etzelserver.aviscript.ml/docs/internal/skip-list-delay-queue/</guid>
       <description>&lt;p&gt;[date:64bit:Int]&lt;/p&gt;
 
 &lt;ul&gt;
@@ -43,10 +43,10 @@
     
     <item>
       <title>C# / .NET Driver</title>
-      <link>http://163.172.174.245/etzel-site/public/docs/drivers/dotnet/</link>
+      <link>http://etzelserver.aviscript.ml/docs/drivers/dotnet/</link>
       <pubDate>Thu, 27 Aug 2015 13:11:05 +0530</pubDate>
       
-      <guid>http://163.172.174.245/etzel-site/public/docs/drivers/dotnet/</guid>
+      <guid>http://etzelserver.aviscript.ml/docs/drivers/dotnet/</guid>
       <description>
 
 &lt;p&gt;using NuGet Console in Visual Studio&lt;/p&gt;
@@ -158,10 +158,10 @@ An entity fetching data from the specific queue is called a worker. You can mult
     
     <item>
       <title>PHP Driver</title>
-      <link>http://163.172.174.245/etzel-site/public/docs/drivers/php/</link>
+      <link>http://etzelserver.aviscript.ml/docs/drivers/php/</link>
       <pubDate>Sun, 23 Aug 2015 11:33:19 +0530</pubDate>
       
-      <guid>http://163.172.174.245/etzel-site/public/docs/drivers/php/</guid>
+      <guid>http://etzelserver.aviscript.ml/docs/drivers/php/</guid>
       <description>
 
 &lt;pre&gt;&lt;code&gt;composer require bat_coder/etzelclient:dev-master
@@ -226,10 +226,10 @@ An entity fetching data from the specific queue is called a worker. You can mult
     
     <item>
       <title>Javascript Driver</title>
-      <link>http://163.172.174.245/etzel-site/public/docs/drivers/js/</link>
+      <link>http://etzelserver.aviscript.ml/docs/drivers/js/</link>
       <pubDate>Sat, 22 Aug 2015 23:39:49 +0530</pubDate>
       
-      <guid>http://163.172.174.245/etzel-site/public/docs/drivers/js/</guid>
+      <guid>http://etzelserver.aviscript.ml/docs/drivers/js/</guid>
       <description>
 
 &lt;p&gt;You can install the node client by opening a command prompt and using the following command&lt;/p&gt;
@@ -312,10 +312,10 @@ An entity fetching data from the specific queue is called a worker. You can mult
     
     <item>
       <title>Data format</title>
-      <link>http://163.172.174.245/etzel-site/public/docs/internal/data-format/</link>
+      <link>http://etzelserver.aviscript.ml/docs/internal/data-format/</link>
       <pubDate>Sat, 22 Aug 2015 23:02:31 +0530</pubDate>
       
-      <guid>http://163.172.174.245/etzel-site/public/docs/internal/data-format/</guid>
+      <guid>http://etzelserver.aviscript.ml/docs/internal/data-format/</guid>
       <description>
 
 &lt;h3 id=&#34;queue-element-format-in-memory&#34;&gt;Queue Element format in Memory&lt;/h3&gt;

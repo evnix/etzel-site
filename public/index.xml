@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Etzel Server</title>
-    <link>http://163.172.174.245/etzel-site/public/</link>
+    <link>http://etzelserver.aviscript.ml/</link>
     <description>Recent content on Etzel Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Jan 2016 12:22:13 +0530</lastBuildDate>
-    <atom:link href="http://163.172.174.245/etzel-site/public/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://etzelserver.aviscript.ml/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Skip List based Delay Queue</title>
-      <link>http://163.172.174.245/etzel-site/public/docs/internal/skip-list-delay-queue/</link>
+      <link>http://etzelserver.aviscript.ml/docs/internal/skip-list-delay-queue/</link>
       <pubDate>Fri, 01 Jan 2016 12:22:13 +0530</pubDate>
       
-      <guid>http://163.172.174.245/etzel-site/public/docs/internal/skip-list-delay-queue/</guid>
+      <guid>http://etzelserver.aviscript.ml/docs/internal/skip-list-delay-queue/</guid>
       <description>&lt;p&gt;[date:64bit:Int]&lt;/p&gt;
 
 &lt;ul&gt;
@@ -43,10 +43,10 @@
     
     <item>
       <title>C# / .NET Driver</title>
-      <link>http://163.172.174.245/etzel-site/public/docs/drivers/dotnet/</link>
+      <link>http://etzelserver.aviscript.ml/docs/drivers/dotnet/</link>
       <pubDate>Thu, 27 Aug 2015 13:11:05 +0530</pubDate>
       
-      <guid>http://163.172.174.245/etzel-site/public/docs/drivers/dotnet/</guid>
+      <guid>http://etzelserver.aviscript.ml/docs/drivers/dotnet/</guid>
       <description>
 
 &lt;p&gt;using NuGet Console in Visual Studio&lt;/p&gt;
@@ -158,10 +158,10 @@ An entity fetching data from the specific queue is called a worker. You can mult
     
     <item>
       <title>PHP Driver</title>
-      <link>http://163.172.174.245/etzel-site/public/docs/drivers/php/</link>
+      <link>http://etzelserver.aviscript.ml/docs/drivers/php/</link>
       <pubDate>Sun, 23 Aug 2015 11:33:19 +0530</pubDate>
       
-      <guid>http://163.172.174.245/etzel-site/public/docs/drivers/php/</guid>
+      <guid>http://etzelserver.aviscript.ml/docs/drivers/php/</guid>
       <description>
 
 &lt;pre&gt;&lt;code&gt;composer require bat_coder/etzelclient:dev-master
@@ -226,10 +226,10 @@ An entity fetching data from the specific queue is called a worker. You can mult
     
     <item>
       <title>Javascript Driver</title>
-      <link>http://163.172.174.245/etzel-site/public/docs/drivers/js/</link>
+      <link>http://etzelserver.aviscript.ml/docs/drivers/js/</link>
       <pubDate>Sat, 22 Aug 2015 23:39:49 +0530</pubDate>
       
-      <guid>http://163.172.174.245/etzel-site/public/docs/drivers/js/</guid>
+      <guid>http://etzelserver.aviscript.ml/docs/drivers/js/</guid>
       <description>
 
 &lt;p&gt;You can install the node client by opening a command prompt and using the following command&lt;/p&gt;
@@ -312,10 +312,10 @@ An entity fetching data from the specific queue is called a worker. You can mult
     
     <item>
       <title>Data format</title>
-      <link>http://163.172.174.245/etzel-site/public/docs/internal/data-format/</link>
+      <link>http://etzelserver.aviscript.ml/docs/internal/data-format/</link>
       <pubDate>Sat, 22 Aug 2015 23:02:31 +0530</pubDate>
       
-      <guid>http://163.172.174.245/etzel-site/public/docs/internal/data-format/</guid>
+      <guid>http://etzelserver.aviscript.ml/docs/internal/data-format/</guid>
       <description>
 
 &lt;h3 id=&#34;queue-element-format-in-memory&#34;&gt;Queue Element format in Memory&lt;/h3&gt;
@@ -353,36 +353,36 @@ Item: Variable lenght text
     
     <item>
       <title>Documentation</title>
-      <link>http://163.172.174.245/etzel-site/public/documentation/</link>
+      <link>http://etzelserver.aviscript.ml/documentation/</link>
       <pubDate>Sat, 22 Aug 2015 21:24:53 +0530</pubDate>
       
-      <guid>http://163.172.174.245/etzel-site/public/documentation/</guid>
+      <guid>http://etzelserver.aviscript.ml/documentation/</guid>
       <description>
 
 &lt;h3 id=&#34;general&#34;&gt;General&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://163.172.174.245/etzel-site/public/getstarted/&#34;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://etzelserver.aviscript.ml/getstarted/&#34;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;etzel-internals&#34;&gt;Etzel Internals&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://163.172.174.245/etzel-site/public/docs/internal/req-resp-format/&#34;&gt;Request &amp;amp; Response format&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://163.172.174.245/etzel-site/public/docs/internal/worker-algorithm/&#34;&gt;Worker Alogrithm/Flow&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://163.172.174.245/etzel-site/public/docs/internal/server-algorithm/&#34;&gt;Server Algorithm/Flow&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://163.172.174.245/etzel-site/public/docs/internal/data-format/&#34;&gt;Data format&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://etzelserver.aviscript.ml/docs/internal/req-resp-format/&#34;&gt;Request &amp;amp; Response format&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://etzelserver.aviscript.ml/docs/internal/worker-algorithm/&#34;&gt;Worker Alogrithm/Flow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://etzelserver.aviscript.ml/docs/internal/server-algorithm/&#34;&gt;Server Algorithm/Flow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://etzelserver.aviscript.ml/docs/internal/data-format/&#34;&gt;Data format&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
     
     <item>
       <title>Getting started</title>
-      <link>http://163.172.174.245/etzel-site/public/getstarted/</link>
+      <link>http://etzelserver.aviscript.ml/getstarted/</link>
       <pubDate>Tue, 18 Aug 2015 13:00:41 +0530</pubDate>
       
-      <guid>http://163.172.174.245/etzel-site/public/getstarted/</guid>
-      <description>&lt;p&gt;Download etzel-server-*.zip from the &lt;a href=&#34;http://163.172.174.245/etzel-site/public/downloads/&#34;&gt;download&lt;/a&gt; section.&lt;/p&gt;
+      <guid>http://etzelserver.aviscript.ml/getstarted/</guid>
+      <description>&lt;p&gt;Download etzel-server-*.zip from the &lt;a href=&#34;http://etzelserver.aviscript.ml/downloads/&#34;&gt;download&lt;/a&gt; section.&lt;/p&gt;
 
 &lt;p&gt;Inside the archive is a directory named &lt;code&gt;etzel_release&lt;/code&gt;. You should extract this into some appropriate location. The &lt;code&gt;bin&lt;/code&gt; directory will be found in this directory.&lt;/p&gt;
 
@@ -414,15 +414,15 @@ Item: Variable lenght text
     
     <item>
       <title>Etzel Server</title>
-      <link>http://163.172.174.245/etzel-site/public/home/</link>
+      <link>http://etzelserver.aviscript.ml/home/</link>
       <pubDate>Tue, 18 Aug 2015 10:35:58 +0530</pubDate>
       
-      <guid>http://163.172.174.245/etzel-site/public/home/</guid>
+      <guid>http://etzelserver.aviscript.ml/home/</guid>
       <description>
 
 &lt;p&gt;A Fast &amp;amp; Reliable open source Job delegation &amp;amp; queueing server.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://163.172.174.245/etzel-site/public/images/etzel.png&#34; alt=&#34;Etzel Server&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://etzelserver.aviscript.ml/images/etzel.png&#34; alt=&#34;Etzel Server&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Etzel is built for Robust messaging between applications. It has built-in support for load-balancing and fault tolerance.&lt;/p&gt;
 
@@ -486,10 +486,10 @@ you could have hundreds of workers connected to Etzel to do the processing and E
     
     <item>
       <title>About</title>
-      <link>http://163.172.174.245/etzel-site/public/about/</link>
+      <link>http://etzelserver.aviscript.ml/about/</link>
       <pubDate>Mon, 17 Aug 2015 22:07:32 +0530</pubDate>
       
-      <guid>http://163.172.174.245/etzel-site/public/about/</guid>
+      <guid>http://etzelserver.aviscript.ml/about/</guid>
       <description>
 
 &lt;p&gt;Etzel is a Job Delegation and queueing server.&lt;/p&gt;
@@ -514,10 +514,10 @@ This makes Etzel as easy to connect as a HTTP service and yet have speeds simila
     
     <item>
       <title>front</title>
-      <link>http://163.172.174.245/etzel-site/public/front/</link>
+      <link>http://etzelserver.aviscript.ml/front/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://163.172.174.245/etzel-site/public/front/</guid>
+      <guid>http://etzelserver.aviscript.ml/front/</guid>
       <description></description>
     </item>
     
